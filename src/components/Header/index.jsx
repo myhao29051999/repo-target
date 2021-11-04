@@ -9,24 +9,23 @@ import HeaderMobile from "./HeaderMobile";
 import HeaderDesktop from "./HeaderDesktop";
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(true);
+  const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
 
-  const handleResize = () => {
-    if (window.innerWidth > screens.desktop) {
-      setIsDesktop(true);
-    } else {
-      setIsDesktop(false);
-    }
+    React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    return { width };
   };
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
-
-  if (isDesktop) {
-    return <HeaderDesktop />;
-  } else {
+  const viewPort = useViewport();
+  const isMobile = viewPort.width <= 1024;
+  if (isMobile) {
     return <HeaderMobile />;
+  } else {
+    return <HeaderDesktop />;
   }
 }
 export default Header;
