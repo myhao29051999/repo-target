@@ -23,7 +23,7 @@ export default function HeaderDesktop() {
           <li>Lịch chiếu</li>
           <li>Cụm rạp</li>
           <li>Tin tức</li>
-          <li>Ứng dụng</li>
+          <li>Ứng dụng hi</li>
         </ul>
       </ListDes>
       <ButtonsDes span={6}>
