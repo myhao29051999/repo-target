@@ -10,22 +10,23 @@ import HeaderDesktop from "./HeaderDesktop";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   const handleResize = () => {
-    if (window.innerWidth < screens.mobile) {
-      setIsMobile(true);
+    if (window.innerWidth > screens.desktop) {
+      setIsDesktop(true);
     } else {
-      setIsMobile(false);
+      setIsDesktop(false);
     }
   };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });
 
-  if (isMobile) {
-    return <HeaderMobile />;
-  } else {
+  if (isDesktop) {
     return <HeaderDesktop />;
+  } else {
+    return <HeaderMobile />;
   }
 }
 export default Header;
