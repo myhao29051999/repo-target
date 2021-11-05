@@ -16,10 +16,10 @@ function CustomDrawer() {
       </Button>
       <Drawer
         title="Basic Drawer"
-        placement="right"
+        placement={"right"}
         onClose={onClose}
         visible={visible}
-        width={767}
+        width="300px"
       >
         <p>Some contents...</p>
         <p>Some contents...</p>

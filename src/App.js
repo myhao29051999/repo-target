@@ -8,6 +8,9 @@ import { adminRouter, mainRouter } from "./configs/router";
 // templates
 import RouterMainTemplate from "templates/main";
 import RouterAdminTemplate from "templates/admin";
+
+// css
+import "antd/dist/antd.css";
 function App() {
   const renderMainRouter = () => {
     return mainRouter.map(({ path, exact, Component }) => {
