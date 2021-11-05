@@ -1,6 +1,9 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
 
+// styles
+import { TixCarouselStyle } from "./style";
+
 export default function TixCarousel() {
   const data = [
     {
@@ -58,7 +61,7 @@ export default function TixCarousel() {
     fontWeight: "bold",
   };
   return (
-    <div className="App">
+    <TixCarouselStyle className="App">
       <div style={{ textAlign: "center" }}>
         <div>
           <Carousel
@@ -88,6 +91,6 @@ export default function TixCarousel() {
           />
         </div>
       </div>
-    </div>
+    </TixCarouselStyle>
   );
 }
