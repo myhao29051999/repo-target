@@ -5,9 +5,8 @@ const variableStyles = {
 
   textWhite: "#ffffff",
 
-  // theme
-  darkTheme: "#1E252B",
-  lightTheme: "#F7F7F9",
+  // gradient
+  backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",
 
   // background
   backgroundWhite: "#ffffff",
