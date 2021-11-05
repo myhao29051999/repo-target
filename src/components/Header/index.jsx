@@ -9,7 +9,7 @@ import HeaderDesktop from "./HeaderDesktop";
 
 function Header() {
   const viewPort = useViewPort();
-  const isMobile = viewPort.width <= 1024;
+  const isMobile = viewPort.width <= 768;
   if (isMobile) {
     return <HeaderMobile />;
   } else {
