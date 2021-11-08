@@ -20,19 +20,13 @@ export const MasterLayoutStyle = styled.div`
   @media only screen and (max-width: 864px) {
     width: 93%;
   }
-  @media only screen and (max-width: 745px) {
-    width: 52%;
+  @media only screen and (max-width: 746px) {
+    width: 80%;
   }
-  @media only screen and (max-width: 745px) {
-    width: 52%;
+  @media only screen and (max-width: 657px) {
+    width: 85%;
   }
-  @media only screen and (max-width: 449px) {
-    width: 55%;
-  }
-  @media only screen and (max-width: 397px) {
-    width: 64%;
-  }
-  @media only screen and (max-width: 391px) {
-    width: 70%;
+  @media only screen and (max-width: 544px) {
+    width: 50%;
   }
 `;

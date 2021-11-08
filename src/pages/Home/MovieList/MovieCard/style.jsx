@@ -14,8 +14,11 @@ export const CardStyle = styled(Card)`
   @media only screen and (max-width: 864px) {
     width: 220px;
   }
-  @media only screen and (max-width: 745px) {
+  @media only screen and (max-width: 746px) {
     width: 250px;
+  }
+  @media only screen and (max-width: 629px) {
+    width: 220px;
   }
   .ant-card-cover {
     height: 318px;

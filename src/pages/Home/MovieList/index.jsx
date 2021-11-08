@@ -60,15 +60,15 @@ function MovieList() {
   const settings = {
     className: "center",
     centerModeL: true,
-    infinite: false,
+    infinite: true,
     centerPadding: "60px",
     slidesToShow: 4,
     slidesToScroll: 4,
     speed: 500,
     rows: 2,
     slidesPerRow: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow className="iconArrow" />,
+    prevArrow: <SamplePrevArrow className="iconArrow" />,
     responsive: [
       {
         breakpoint: 1400,
@@ -98,8 +98,18 @@ function MovieList() {
       {
         breakpoint: 745,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           rows: 2,
+          infinite: true,
+          slidesToScroll: 2,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 544,
+        settings: {
+          slidesToShow: 1,
+          rows: 1,
           infinite: true,
           slidesToScroll: 1,
           initialSlide: 1,
