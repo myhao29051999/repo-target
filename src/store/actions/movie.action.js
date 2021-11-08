@@ -14,7 +14,7 @@ export const getMovieList = () => {
     //call api
     axios({
       method: "GET",
-      url: "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
+      url: "https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP02",
       data: null,
     })
       .then((res) => {

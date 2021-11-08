@@ -3,6 +3,24 @@ import variableStyles from "styles/variable-styles";
 
 export const MasterLayoutStyle = styled.div`
   background: ${variableStyles.backgroundWhite};
-  width: 70%;
+  width: 64%;
   margin: 60px auto;
+  @media only screen and (max-width: 1400px) {
+    width: 68%;
+  }
+  @media only screen and (max-width: 1300px) {
+    width: 78%;
+  }
+  @media only screen and (max-width: 1142px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 1096px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 864px) {
+    width: 93%;
+  }
+  @media only screen and (max-width: 745px) {
+    width: 60%;
+  }
 `;

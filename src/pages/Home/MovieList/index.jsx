@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
-import Slider from "react-slick";
 
 // layouts
 import MasterLayout from "layouts/MasterLayout";
@@ -12,13 +11,11 @@ import { getMovieList } from "store/actions/movie.action";
 // components
 import MovieCard from "./MovieCard";
 
+// styles
+import { SliderStyle } from "./style";
 function MovieList() {
   const movieList = useSelector((state) => state.movie.movieList);
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
-
-  useEffect(() => {
-    dispatch(getMovieList());
-  }, []);
 
   const renderListMovie = () => {
     return movieList.map((movie, index) => {
@@ -39,7 +36,11 @@ function MovieList() {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "green" }}
+        style={{
+          ...style,
+          display: "block",
+          background: "gray",
+        }}
         onClick={onClick}
       />
     );
@@ -50,7 +51,7 @@ function MovieList() {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        style={{ ...style, display: "block", background: "gray" }}
         onClick={onClick}
       />
     );
@@ -70,36 +71,35 @@ function MovieList() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1230,
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1096,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1020,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          rows: 2,
           infinite: true,
         },
       },
       {
-        breakpoint: 940,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 635,
+        breakpoint: 745,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          rows: 1,
-          infinite: true,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          rows: 1,
+          rows: 2,
           infinite: true,
           slidesToScroll: 1,
           initialSlide: 1,
@@ -108,10 +108,13 @@ function MovieList() {
     ],
   };
 
+  useEffect(() => {
+    dispatch(getMovieList());
+  }, []);
+
   return (
     <MasterLayout>
-      <h1>DS phim</h1>
-      <Slider {...settings}>{renderListMovie()}</Slider>
+      <SliderStyle {...settings}>{renderListMovie()}</SliderStyle>
     </MasterLayout>
   );
 }
