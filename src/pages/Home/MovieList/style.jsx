@@ -77,6 +77,9 @@ export const SliderStyle = styled(Slider)`
   @media only screen and (max-width: 518px) {
     padding-left: 20px;
   }
+  @media only screen and (max-width: 511px) {
+    padding-left: 14px;
+  }
   @media only screen and (max-width: 497px) {
     padding-left: 13px;
   }
