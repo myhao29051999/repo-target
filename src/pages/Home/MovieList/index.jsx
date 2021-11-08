@@ -83,6 +83,7 @@ function MovieList() {
           slidesToShow: 1,
           slidesToScroll: 1,
           rows: 1,
+          infinite: true,
           initialSlide: 1,
         },
       },
@@ -91,6 +92,7 @@ function MovieList() {
         settings: {
           slidesToShow: 1,
           rows: 1,
+          infinite: true,
           slidesToScroll: 1,
         },
       },
