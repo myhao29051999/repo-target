@@ -54,7 +54,7 @@ export default function TixCarousel() {
             pauseIconSize="40px"
             slideBackgroundColor="darkgrey"
             slideImageFit="cover"
-            thumbnails={true}
+            thumbnails={false}
             thumbnailWidth="100px"
             style={{
               textAlign: "center",
@@ -63,9 +63,9 @@ export default function TixCarousel() {
               margin: "60px auto",
             }}
           />
-          <div className="button-play">
+          {/* <div className="button-play">
             <i className="fa fa-play"></i>
-          </div>
+          </div> */}
         </div>
       </div>
     </TixCarouselStyle>

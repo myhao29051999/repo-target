@@ -11,6 +11,9 @@ import { Provider } from "react-redux";
 // font-awesome
 import "font-awesome/css/font-awesome.min.css";
 
+// slick
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 ReactDOM.render(
   <Provider store={store}>
     <App />

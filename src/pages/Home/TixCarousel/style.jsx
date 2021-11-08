@@ -31,7 +31,7 @@ export const TixCarouselStyle = styled.div`
       }
     }
   }
-  .button-play {
+  /* .button-play {
     position: absolute;
     background: rgba(149, 145, 145, 0.855);
     font-size: 60px;
@@ -53,5 +53,12 @@ export const TixCarouselStyle = styled.div`
       transform: translate(-50%, -50%);
       color: ${variableStyles.textWhite};
     }
-  }
+    @media only screen and (max-width: 500px) {
+      height: 50px;
+      width: 50px;
+      i {
+        font-size: ${variableStyles.fontSize_18};
+      }
+    }
+  } */
 `;
