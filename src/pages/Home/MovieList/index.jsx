@@ -82,6 +82,7 @@ function MovieList() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          rows: 1,
           initialSlide: 1,
         },
       },
@@ -89,6 +90,7 @@ function MovieList() {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          rows: 1,
           slidesToScroll: 1,
         },
       },
