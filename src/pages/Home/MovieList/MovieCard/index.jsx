@@ -10,11 +10,7 @@ const propTypes = {
 function MovieCard(props) {
   const { urlImage, movieName, ...other } = props;
   return (
-    <CardStyle
-      hoverable
-      style={{ width: 240 }}
-      cover={<img alt="img-detail-movie" src={urlImage} />}
-    >
+    <CardStyle hoverable cover={<img alt="img-detail-movie" src={urlImage} />}>
       <MetaStyle
         title={movieName}
         // description="www.instagram.comgvhbgggggggggggggggggggggggffffffffffffffffffffffffffffg"

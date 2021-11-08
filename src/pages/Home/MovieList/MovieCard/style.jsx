@@ -3,6 +3,10 @@ import { Card } from "antd";
 const { Meta } = Card;
 
 export const CardStyle = styled(Card)`
+  width: 240px;
+  @media only screen and (max-width: 635px) {
+    width: 100%;
+  }
   .ant-card-cover {
     height: 330px;
     img {
