@@ -21,6 +21,6 @@ export const MasterLayoutStyle = styled.div`
     width: 93%;
   }
   @media only screen and (max-width: 745px) {
-    width: 60%;
+    width: 52%;
   }
 `;

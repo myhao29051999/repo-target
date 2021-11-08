@@ -60,7 +60,7 @@ function MovieList() {
   const settings = {
     className: "center",
     centerModeL: true,
-    infinite: true,
+    infinite: false,
     centerPadding: "60px",
     slidesToShow: 4,
     slidesToScroll: 4,
