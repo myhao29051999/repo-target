@@ -29,4 +29,7 @@ export const MasterLayoutStyle = styled.div`
   @media only screen and (max-width: 544px) {
     width: 50%;
   }
+  @media only screen and (max-width: 400px) {
+    width: 61.5%;
+  }
 `;
