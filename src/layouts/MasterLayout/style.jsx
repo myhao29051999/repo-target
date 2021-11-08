@@ -3,6 +3,6 @@ import variableStyles from "styles/variable-styles";
 
 export const MasterLayoutStyle = styled.div`
   background: ${variableStyles.backgroundWhite};
-  width: 80%;
+  width: 70%;
   margin: 60px auto;
 `;

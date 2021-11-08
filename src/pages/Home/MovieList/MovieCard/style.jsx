@@ -4,6 +4,7 @@ const { Meta } = Card;
 
 export const CardStyle = styled(Card)`
   width: 240px;
+  margin-bottom: 20px;
   @media only screen and (max-width: 635px) {
     width: 100%;
   }

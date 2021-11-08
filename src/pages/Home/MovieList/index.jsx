@@ -59,7 +59,7 @@ function MovieList() {
   const settings = {
     className: "center",
     centerModeL: true,
-    infinite: false,
+    infinite: true,
     centerPadding: "60px",
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -70,7 +70,15 @@ function MovieList() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1230,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 940,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
