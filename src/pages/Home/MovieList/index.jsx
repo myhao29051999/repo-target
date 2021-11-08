@@ -94,6 +94,7 @@ function MovieList() {
           rows: 1,
           infinite: true,
           slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
     ],
