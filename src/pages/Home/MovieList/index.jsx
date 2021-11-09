@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
+import { Link, animateScroll as scroll } from "react-scroll";
+
+// utils
+import { formatDate } from "utils";
 
 // layouts
 import MasterLayout from "layouts/MasterLayout";
@@ -121,10 +125,35 @@ function MovieList() {
   useEffect(() => {
     dispatch(getMovieList());
   }, []);
+  let newDate = new Date();
+  let date = newDate.getDate();
+  let month = newDate.getMonth() + 1;
+  let year = newDate.getFullYear();
+
+  function checkDate(currentDate, someDate) {
+    if (someDate > currentDate) {
+      return <p>sắp chiếu</p>;
+    } else {
+      return <p>đang chiếu</p>;
+    }
+  }
 
   return (
-    <MasterLayout>
+    <MasterLayout id="showTimes">
       <SliderStyle {...settings}>{renderListMovie()}</SliderStyle>
+      <h1>{formatDate(newDate, "DD-MM-YYYY")}</h1>
+      {/* <h1>Ngày hôm nay: {date + "-" + month + "-" + year}</h1> */}
+      <h1>
+        Render ds ngày:{" "}
+        {movieList.map((movie, item) => (
+          <p>
+            -Tên phim: {movie.tenPhim} + Ngày chiếu:{" "}
+            {formatDate(movie.ngayKhoiChieu, "DD-MM-YYYY")} + Check:{" "}
+            {checkDate(formatDate(newDate), formatDate(movie.ngayKhoiChieu))}
+          </p>
+        ))}
+      </h1>
+      <button onClick={() => scroll.scrollToTop()}>scroll to top</button>
     </MasterLayout>
   );
 }

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import moment from "moment";
 
 export function useViewPort() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -10,4 +11,15 @@ export function useViewPort() {
   }, []);
 
   return { width };
+}
+
+export function formatDate(d, f) {
+  if (d) {
+    try {
+      return moment(d).format(f);
+    } catch (error) {
+      return "";
+    }
+  }
+  return "";
 }

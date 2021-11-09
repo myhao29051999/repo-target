@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// libraries
+import { Link, animateScroll as scroll } from "react-scroll";
+
 // constants
 import { images } from "constants/images";
 
@@ -40,10 +43,26 @@ function HeaderMobile() {
             Đăng nhập
           </Button>
           <HeaderListContentStyle>
-            <li>Lịch chiếu</li>
-            <li>Cụm rạp</li>
-            <li>Tin tức</li>
-            <li>Ứng dụng</li>
+            <li>
+              <Link to="showTimes" smooth={true} duration={1000}>
+                Lịch chiếu
+              </Link>
+            </li>
+            <li>
+              <Link to="showTimes" smooth={true} duration={1000}>
+                Cụm rạp
+              </Link>
+            </li>
+            <li>
+              <Link to="showTimes" smooth={true} duration={1000}>
+                Tin tức
+              </Link>
+            </li>
+            <li>
+              <Link to="showTimes" smooth={true} duration={1000}>
+                Ứng dụng
+              </Link>
+            </li>
           </HeaderListContentStyle>
         </Drawer>
       </HeaderButtonStyle>

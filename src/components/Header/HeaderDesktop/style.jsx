@@ -28,12 +28,14 @@ export const ListDes = styled.div`
     padding: 0;
 
     li {
-      margin-right: 20px;
-      cursor: pointer;
-      color: ${variableStyles.textBlack};
-      font-family: "SF Regular";
-      &:hover {
-        color: ${variableStyles.primaryRed};
+      a {
+        margin-right: 20px;
+        cursor: pointer;
+        color: ${variableStyles.textBlack};
+        font-family: "SF Regular";
+        &:hover {
+          color: ${variableStyles.primaryRed};
+        }
       }
     }
   }

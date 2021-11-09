@@ -21,6 +21,12 @@ export const HeaderListContentStyle = styled.ul`
   margin-top: 30px;
   margin-left: 4px;
   li {
+    a {
+      color: ${variableStyles.textBlack};
+      &:hover {
+        color: ${variableStyles.primaryRed};
+      }
+    }
     margin-bottom: 25px;
     cursor: pointer;
     color: ${variableStyles.textBlack};

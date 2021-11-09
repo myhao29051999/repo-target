@@ -1,7 +1,7 @@
 import React from "react";
 
 // libraries
-import { Col } from "antd";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // constants
 import { images } from "constants/images";
@@ -20,10 +20,20 @@ export default function HeaderDesktop() {
       </LogoDes>
       <ListDes span={12}>
         <ul>
-          <li>Lịch chiếu</li>
-          <li>Cụm rạp</li>
-          <li>Tin tức</li>
-          <li>Ứng dụng</li>
+          <li>
+            <Link to="showTimes" smooth={true} duration={1000}>
+              Lịch chiếu
+            </Link>
+          </li>
+          <li>
+            <a>Cụm rạp</a>
+          </li>
+          <li>
+            <a>Tin tức</a>
+          </li>
+          <li>
+            <a>Ứng dụng</a>
+          </li>
         </ul>
       </ListDes>
       <ButtonsDes span={6}>

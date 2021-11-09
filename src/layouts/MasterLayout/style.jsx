@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import variableStyles from "styles/variable-styles";
 
-export const MasterLayoutStyle = styled.div`
+export const MasterLayoutStyle = styled.section`
   background: ${variableStyles.backgroundWhite};
   width: 64%;
   margin: 60px auto;
