@@ -99,26 +99,26 @@ function MovieList() {
           infinite: true,
         },
       },
-      {
-        breakpoint: 745,
-        settings: {
-          slidesToShow: 2,
-          rows: 2,
-          infinite: true,
-          slidesToScroll: 2,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 544,
-        settings: {
-          slidesToShow: 1,
-          rows: 1,
-          infinite: true,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
+      // {
+      //   breakpoint: 745,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     rows: 2,
+      //     infinite: true,
+      //     slidesToScroll: 3,
+      //     initialSlide: 1,
+      //   },
+      // },
+      // {
+      //   breakpoint: 544,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     rows: 2,
+      //     infinite: true,
+      //     slidesToScroll: 3,
+      //     initialSlide: 1,
+      //   },
+      // },
     ],
   };
 

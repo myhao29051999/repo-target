@@ -20,16 +20,16 @@ export const MasterLayoutStyle = styled.section`
   @media only screen and (max-width: 864px) {
     width: 93%;
   }
-  @media only screen and (max-width: 746px) {
+  /* @media only screen and (max-width: 746px) {
     width: 80%;
   }
   @media only screen and (max-width: 657px) {
     width: 85%;
-  }
-  @media only screen and (max-width: 544px) {
-    width: 50%;
-  }
-  @media only screen and (max-width: 400px) {
+  } */
+  /* @media only screen and (max-width: 544px) {
+    width: 93%;
+  } */
+  /* @media only screen and (max-width: 400px) {
     width: 61.5%;
-  }
+  } */
 `;
