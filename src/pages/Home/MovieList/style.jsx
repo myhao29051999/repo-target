@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import Slider from "react-slick";
+import { Tabs } from "antd";
+import variableStyles from "styles/variable-styles";
+
+const { TabPane } = Tabs;
+
 export const SliderStyle = styled(Slider)`
+  .slick-prev:before,
+  .slick-next:before {
+    color: #b0adad;
+  }
   padding-left: 20px;
   @media only screen and (max-width: 1438px) {
     padding-left: 10px;
@@ -56,37 +65,36 @@ export const SliderStyle = styled(Slider)`
   @media only screen and (max-width: 750px) {
     padding-left: 9px;
   }
-  /* @media only screen and (max-width: 746px) {
-    padding-left: 35px;
-  }
-  @media only screen and (max-width: 700px) {
-    padding-left: 20px;
-  }
-  @media only screen and (max-width: 629px) {
-    padding-left: 30px;
-  }
-  @media only screen and (max-width: 600px) {
-    padding-left: 20px;
-  }
-  @media only screen and (max-width: 562px) {
-    padding-left: 10px;
-  }
-  @media only screen and (max-width: 544px) {
-    padding-left: 23px;
-  }
-  @media only screen and (max-width: 518px) {
-    padding-left: 20px;
-  }
-  @media only screen and (max-width: 511px) {
-    padding-left: 14px;
-  }
-  @media only screen and (max-width: 497px) {
-    padding-left: 13px;
-  }
-  @media only screen and (max-width: 475px) {
-    padding-left: 8px;
-  }
-  @media only screen and (max-width: 450px) {
-    padding-left: 0px;
-  } */
 `;
+export const TabsShowTimeStyle = styled(Tabs)`
+  .slick-prev:before,
+  .slick-next:before {
+    color: #b0adad;
+  }
+  .ant-tabs-nav-wrap {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .ant-tabs-nav::before {
+    border-bottom: none !important;
+  }
+  .ant-tabs-tab:hover {
+    color: ${variableStyles.primaryRed};
+  }
+  .ant-tabs-tab {
+    font-size: ${variableStyles.fontSize_24};
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: ${variableStyles.primaryRed};
+  }
+  .ant-tabs-tab-btn:focus {
+    color: ${variableStyles.primaryRed};
+  }
+  .ant-tabs-ink-bar {
+    display: none;
+    width: 0;
+    background: transparent;
+  }
+`;
+
+export const TabPaneShowTimeStyle = styled(TabPane)``;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 // utils
 import { formatDate } from "utils";
@@ -16,7 +16,8 @@ import { getMovieList } from "store/actions/movie.action";
 import MovieCard from "./MovieCard";
 
 // styles
-import { SliderStyle } from "./style";
+import { SliderStyle, TabsShowTimeStyle, TabPaneShowTimeStyle } from "./style";
+
 function MovieList() {
   const movieList = useSelector((state) => state.movie.movieList);
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
@@ -43,7 +44,6 @@ function MovieList() {
         style={{
           ...style,
           display: "block",
-          background: "gray",
         }}
         onClick={onClick}
       />
@@ -55,7 +55,10 @@ function MovieList() {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "gray" }}
+        style={{
+          ...style,
+          display: "block",
+        }}
         onClick={onClick}
       />
     );
@@ -71,8 +74,8 @@ function MovieList() {
     speed: 500,
     rows: 2,
     slidesPerRow: 1,
-    nextArrow: <SampleNextArrow className="iconArrow" />,
-    prevArrow: <SamplePrevArrow className="iconArrow" />,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1400,
@@ -99,26 +102,6 @@ function MovieList() {
           infinite: true,
         },
       },
-      // {
-      //   breakpoint: 745,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     rows: 2,
-      //     infinite: true,
-      //     slidesToScroll: 3,
-      //     initialSlide: 1,
-      //   },
-      // },
-      // {
-      //   breakpoint: 544,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     rows: 2,
-      //     infinite: true,
-      //     slidesToScroll: 3,
-      //     initialSlide: 1,
-      //   },
-      // },
     ],
   };
 
@@ -140,19 +123,30 @@ function MovieList() {
 
   return (
     <MasterLayout id="showTimes">
-      <SliderStyle {...settings}>{renderListMovie()}</SliderStyle>
-      <h1>{formatDate(newDate, "DD-MM-YYYY")}</h1>
-      {/* <h1>Ngày hôm nay: {date + "-" + month + "-" + year}</h1> */}
-      <h1>
-        Render ds ngày:{" "}
-        {movieList.map((movie, item) => (
-          <p>
-            -Tên phim: {movie.tenPhim} + Ngày chiếu:{" "}
-            {formatDate(movie.ngayKhoiChieu, "DD-MM-YYYY")} + Check:{" "}
-            {checkDate(formatDate(newDate), formatDate(movie.ngayKhoiChieu))}
-          </p>
-        ))}
-      </h1>
+      <TabsShowTimeStyle defaultActiveKey="1">
+        <TabPaneShowTimeStyle tab="Đang chiếu" key="1">
+          <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>
+            {renderListMovie()}
+          </SliderStyle>
+        </TabPaneShowTimeStyle>
+        <TabsShowTimeStyle tab="Sắp chiếu" key="2">
+          <h1>{formatDate(newDate, "DD-MM-YYYY")}</h1>
+          <h1>
+            Render ds ngày:{" "}
+            {movieList.map((movie, item) => (
+              <p>
+                -Tên phim: {movie.tenPhim} + Ngày chiếu:{" "}
+                {formatDate(movie.ngayKhoiChieu, "DD-MM-YYYY")} + Check:{" "}
+                {checkDate(
+                  formatDate(newDate),
+                  formatDate(movie.ngayKhoiChieu)
+                )}
+              </p>
+            ))}
+          </h1>
+        </TabsShowTimeStyle>
+      </TabsShowTimeStyle>
+
       <button onClick={() => scroll.scrollToTop()}>scroll to top</button>
     </MasterLayout>
   );
