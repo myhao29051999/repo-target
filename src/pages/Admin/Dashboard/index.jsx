@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Dashboard() {
-  return <div>admiin page</div>;
+  return <div>admiin pag1e</div>;
 }
