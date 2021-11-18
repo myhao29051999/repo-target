@@ -37,6 +37,9 @@ export const TabsShowTimeStyle = styled(Tabs)`
     justify-content: center;
     margin-bottom: 20px;
   }
+  .ant-tabs-nav {
+    margin: 0;
+  }
   .ant-tabs-nav::before {
     border-bottom: none !important;
   }

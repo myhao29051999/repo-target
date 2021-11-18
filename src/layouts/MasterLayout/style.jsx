@@ -13,6 +13,7 @@ export const MasterLayoutStyle = styled.section`
   }
   @media only screen and (max-width: 1142px) {
     width: 90%;
+    margin: 20px auto;
   }
   @media only screen and (max-width: 1096px) {
     width: 95%;
@@ -20,7 +21,10 @@ export const MasterLayoutStyle = styled.section`
   @media only screen and (max-width: 864px) {
     width: 100%;
   }
-  /* @media only screen and (max-width: 769px) {
+  @media only screen and (max-width: 769px) {
     margin: 10px auto;
-  } */
+  }
+  @media only screen and (max-width: 380px) {
+    margin: 0px auto;
+  }
 `;
