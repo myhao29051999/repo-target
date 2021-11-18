@@ -12,7 +12,7 @@ export const MasterLayoutStyle = styled.section`
     width: 80%;
   }
   @media only screen and (max-width: 1142px) {
-    width: 80%;
+    width: 90%;
   }
   @media only screen and (max-width: 1096px) {
     width: 95%;

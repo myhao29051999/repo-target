@@ -8,16 +8,31 @@ const { TabPane } = Tabs;
 export const SliderStyle = styled(Slider)`
   position: relative;
   padding: 0 30px;
-  .slick-prev:before,
-  .slick-next:before {
-    color: #b0adad;
+  .slick-arrow-left {
+    width: 40px;
+    position: absolute;
+    top: 49%;
+    left: -10px;
+    transform: translateY(-50%);
+    @media only screen and (max-width: 500px) {
+      width: 25px;
+      left: -5px;
+    }
+  }
+  .slick-arrow-right {
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 49%;
+    right: -10px;
+    transform: translateY(-50%);
+    @media only screen and (max-width: 500px) {
+      width: 25px;
+      right: -5px;
+    }
   }
 `;
 export const TabsShowTimeStyle = styled(Tabs)`
-  .slick-prev:before,
-  .slick-next:before {
-    color: #b0adad;
-  }
   .ant-tabs-nav-wrap {
     justify-content: center;
     margin-bottom: 20px;

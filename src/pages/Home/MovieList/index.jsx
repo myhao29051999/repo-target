@@ -43,19 +43,11 @@ function MovieList() {
     const { className, style, onClick } = props;
     return (
       <img
-        className="slick-arrow"
+        className="slick-arrow-left"
         style={{ ...style, display: "block" }}
         onClick={onClick}
         src={images.IMG_BACK_ARROW}
         alt="arrow_left"
-        style={{
-          width: "40px",
-          cursor: "pointer",
-          position: "absolute",
-          top: "49%",
-          left: "-10px",
-          transform: "translateY(-50%)",
-        }}
       />
     );
   }
@@ -64,19 +56,11 @@ function MovieList() {
     const { className, style, onClick } = props;
     return (
       <img
-        className="slick-arrow"
+        className="slick-arrow-right"
         style={{ ...style, display: "block" }}
         onClick={onClick}
         src={images.IMG_NEXT_ARROW}
-        alt="arrow_left"
-        style={{
-          width: "40px",
-          cursor: "pointer",
-          position: "absolute",
-          top: "49%",
-          right: "-10px",
-          transform: "translateY(-50%)",
-        }}
+        alt="arrow_right"
       />
     );
   }
@@ -107,15 +91,6 @@ function MovieList() {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1020,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          rows: 2,
           infinite: true,
         },
       },
