@@ -3,32 +3,16 @@ import { Card } from "antd";
 const { Meta } = Card;
 
 export const CardStyle = styled(Card)`
-  width: 215px;
   margin-bottom: 20px;
-  @media only screen and (max-width: 1020px) {
-    width: 280px;
-  }
-  @media only screen and (max-width: 960px) {
-    width: 250px;
-  }
-  @media only screen and (max-width: 864px) {
-    width: 220px;
-  }
-  @media only screen and (max-width: 746px) {
-    width: 200px;
-  }
-  @media only screen and (max-width: 667px) {
-    width: 97%;
-  }
-  /* @media only screen and (max-width: 629px) {
-    width: 220px;
-  } */
+  margin-left: 10px;
+  margin-right: 10px;
+
   .ant-card-cover {
     height: 318px;
     img {
       height: 318px;
     }
-    @media only screen and (max-width: 746px) {
+    /* @media only screen and (max-width: 746px) {
       height: 290px;
       img {
         height: 290px;
@@ -47,9 +31,9 @@ export const CardStyle = styled(Card)`
       }
     }
     @media only screen and (max-width: 400px) {
-      height: 195px;
+      height: 175px;
       img {
-        height: 195px;
+        height: 175px;
       }
     }
     @media only screen and (max-width: 361px) {
@@ -57,7 +41,7 @@ export const CardStyle = styled(Card)`
       img {
         height: 175px;
       }
-    }
+    } */
   }
 `;
 

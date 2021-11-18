@@ -1,72 +1,62 @@
-import { SELECTION_NONE } from "antd/lib/table/hooks/useSelection";
 import React from "react";
-import { Carousel } from "react-carousel-minimal";
-
+import { Image } from "antd";
 // styles
 import { TixCarouselStyle } from "./style";
 
 export default function TixCarousel() {
-  const data = [
-    {
-      image:
-        "https://www.bhdstar.vn/wp-content/uploads/2018/03/Teaser-TroChoi-DayBinh.png",
-    },
-    {
-      image:
-        "https://www.bhdstar.vn/wp-content/uploads/2018/03/Black-Widow.png",
-    },
-    {
-      image: " https://www.bhdstar.vn/wp-content/uploads/2018/03/Shangchi.png",
-    },
-    {
-      image:
-        "https://www.bhdstar.vn/wp-content/uploads/2021/10/Venom-1920x1080.jpg",
-    },
-  ];
-  const captionStyle = {
-    // fontSize: "2em",
-    // fontWeight: "bold",
-    display: "none",
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 2000,
+    adaptiveHeight: true,
   };
 
-  const slideNumberStyle = {
-    fontSize: "20px",
-    fontWeight: "bold",
-  };
   return (
-    <TixCarouselStyle className="App">
-      <div style={{ textAlign: "center" }}>
-        <div className="tix-carousel">
-          <Carousel
-            data={data}
-            time={3000}
-            width="100%"
-            height="650px"
-            captionStyle={captionStyle}
-            radius="0px"
-            slideNumber={false}
-            slideNumberStyle={slideNumberStyle}
-            captionPosition="center"
-            caption={false}
-            automatic={true}
-            dots={false}
-            pauseIconColor="white"
-            pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
-            slideImageFit="cover"
-            thumbnails={false}
-            thumbnailWidth="100px"
-            style={{
-              textAlign: "center",
-              maxWidth: "100%",
-              maxHeight: "650px",
-              margin: "60px auto",
-            }}
-          />
-          {/* <div className="button-play">
-            <i className="fa fa-play"></i>
-          </div> */}
-        </div>
+    <TixCarouselStyle {...settings}>
+      <div>
+        <Image
+          preview={false}
+          width="100%"
+          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Teaser-TroChoi-DayBinh.png"
+          alt="img-carousel"
+        />
+        <a
+          class="venobox myVenobox"
+          data-autoplay="true"
+          data-vbtype="video"
+          href="https://www.youtube.com/watch?v=L2EodPu-3DY&feature=youtu.be"
+        >
+          <i class="fa fa-play"></i>
+        </a>
+      </div>
+      <div>
+        <Image
+          preview={false}
+          width="100%"
+          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Black-Widow.png"
+          alt="img-carousel"
+        />
+      </div>
+      <div>
+        <Image
+          preview={false}
+          width="100%"
+          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Shangchi.png"
+          alt="img-carousel"
+        />
+      </div>
+      <div>
+        <Image
+          preview={false}
+          width="100%"
+          src="https://www.bhdstar.vn/wp-content/uploads/2021/10/Venom-1920x1080.jpg"
+          alt="img-carousel"
+        />
       </div>
     </TixCarouselStyle>
   );

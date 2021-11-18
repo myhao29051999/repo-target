@@ -11,6 +11,9 @@ import RouterAdminTemplate from "templates/admin";
 
 // css
 import "antd/dist/antd.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   const renderMainRouter = () => {
     return mainRouter.map(({ path, exact, Component }) => {

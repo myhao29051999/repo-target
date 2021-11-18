@@ -12,6 +12,9 @@ import MasterLayout from "layouts/MasterLayout";
 // actions
 import { getMovieList } from "store/actions/movie.action";
 
+// constants
+import { images } from "constants/images";
+
 // components
 import MovieCard from "./MovieCard";
 
@@ -39,13 +42,20 @@ function MovieList() {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-        }}
+      <img
+        className="slick-arrow"
+        style={{ ...style, display: "block" }}
         onClick={onClick}
+        src={images.IMG_BACK_ARROW}
+        alt="arrow_left"
+        style={{
+          width: "40px",
+          cursor: "pointer",
+          position: "absolute",
+          top: "49%",
+          left: "-10px",
+          transform: "translateY(-50%)",
+        }}
       />
     );
   }
@@ -53,13 +63,20 @@ function MovieList() {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-        }}
+      <img
+        className="slick-arrow"
+        style={{ ...style, display: "block" }}
         onClick={onClick}
+        src={images.IMG_NEXT_ARROW}
+        alt="arrow_left"
+        style={{
+          width: "40px",
+          cursor: "pointer",
+          position: "absolute",
+          top: "49%",
+          right: "-10px",
+          transform: "translateY(-50%)",
+        }}
       />
     );
   }
