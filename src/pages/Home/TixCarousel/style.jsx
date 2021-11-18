@@ -7,6 +7,12 @@ export const TixCarouselStyle = styled(Slider)`
   .slick-list {
     height: 100% !important;
   }
+  .slick-list:hover {
+    .modeo-video__btnPlay {
+      display: block;
+    }
+  }
+
   .ant-image {
     max-height: 620px;
   }
@@ -44,6 +50,7 @@ export const TixCarouselStyle = styled(Slider)`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      display: none;
     }
   }
 `;

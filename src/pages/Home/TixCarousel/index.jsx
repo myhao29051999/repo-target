@@ -14,8 +14,8 @@ export default function TixCarousel() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    arrows: true,
+    autoplay: true,
+    arrows: false,
     autoplaySpeed: 2000,
     adaptiveHeight: true,
   };
@@ -28,9 +28,10 @@ export default function TixCarousel() {
           width="100%"
           src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Teaser-TroChoi-DayBinh.png"
           alt="img-carousel"
-        ></Image>
+        />
         <ModalVideoCustom videoId={"oqxAJKy0ii4"} />
       </div>
+
       <div className="tix-carousel__item">
         <Image
           preview={false}
