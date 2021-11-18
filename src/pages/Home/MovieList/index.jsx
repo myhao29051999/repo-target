@@ -20,6 +20,7 @@ import MovieCard from "./MovieCard";
 
 // styles
 import { SliderStyle, TabsShowTimeStyle, TabPaneShowTimeStyle } from "./style";
+import { ModalVideoCustom } from "components";
 
 function MovieList() {
   const movieList = useSelector((state) => state.movie.movieList);
@@ -115,6 +116,7 @@ function MovieList() {
 
   return (
     <MasterLayout id="showTimes">
+      {/* <ModalVideoCustom videoId={"QOrfY_GSP9A"} /> */}
       <TabsShowTimeStyle defaultActiveKey="1">
         <TabPaneShowTimeStyle tab="Đang chiếu" key="1">
           <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>

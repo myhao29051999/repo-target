@@ -13,6 +13,7 @@ import RouterAdminTemplate from "templates/admin";
 import "antd/dist/antd.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "react-modal-video/scss/modal-video.scss";
 
 function App() {
   const renderMainRouter = () => {

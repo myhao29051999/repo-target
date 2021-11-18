@@ -25,6 +25,6 @@ export const MasterLayoutStyle = styled.section`
     margin: 10px auto;
   }
   @media only screen and (max-width: 380px) {
-    margin: 0px auto;
+    margin: -10px auto;
   }
 `;

@@ -36,6 +36,9 @@ export const TabsShowTimeStyle = styled(Tabs)`
   .ant-tabs-nav-wrap {
     justify-content: center;
     margin-bottom: 20px;
+    @media only screen and (max-width: 500px) {
+      margin-bottom: 5px;
+    }
   }
   .ant-tabs-nav {
     margin: 0;

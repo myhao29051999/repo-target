@@ -29,7 +29,7 @@ function CustomDrawer(props) {
           width: "25px",
           height: "16px",
           cursor: "pointer",
-          marginTop: "10px",
+          marginTop: "20px",
         }}
         src={images.IMG_SIDE_BAR}
         alt="img-sidebar"

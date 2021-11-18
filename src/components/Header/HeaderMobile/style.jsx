@@ -4,13 +4,21 @@ import variableStyles from "styles/variable-styles";
 
 export const HeaderMobileStyle = styled(Row)`
   justify-content: space-between;
-  margin-left: 10px;
-  margin-right: 23px;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 10;
+  background: ${variableStyles.backgroundWhiteGradient};
+  position: fixed;
+  box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+  padding-left: 10px;
+  padding-right: 15px;
 `;
 
 export const HeaderLogoStyle = styled(Col)`
   img {
     width: 50px;
+    padding-top: 5px;
   }
 `;
 
