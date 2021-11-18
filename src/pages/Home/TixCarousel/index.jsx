@@ -9,13 +9,13 @@ import { TixCarouselStyle } from "./style";
 
 export default function TixCarousel() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    arrows: false,
+    arrows: true,
     autoplaySpeed: 2000,
     adaptiveHeight: true,
   };
