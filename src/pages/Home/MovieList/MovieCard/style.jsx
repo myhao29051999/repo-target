@@ -12,6 +12,14 @@ export const CardStyle = styled(Card)`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    @media only screen and (max-width: 500px) {
+      width: 40px;
+      height: 40px;
+      .fa-play {
+        line-height: 40px;
+        font-size: 12px;
+      }
+    }
   }
   .card__black {
     position: absolute;
@@ -20,7 +28,7 @@ export const CardStyle = styled(Card)`
     width: 100%;
     height: 100%;
     color: white;
-    padding: 50px 30px;
+    padding: 3px 3px;
     opacity: 0;
     transition: all 0.5s;
     background-color: rgba(0, 0, 0, 0.8);
@@ -45,12 +53,6 @@ export const CardStyle = styled(Card)`
       }
     }
 
-    /* @media only screen and (max-width: 650px) {
-      height: 175px;
-      img {
-        height: 175px;
-      }
-    } */
     @media only screen and (max-width: 580px) {
       height: 240px;
       img {

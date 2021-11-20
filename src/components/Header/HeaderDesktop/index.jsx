@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // libraries
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -7,12 +7,19 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { images } from "constants/images";
 
 // components
-import { Button } from "components";
+import { Button, ModalLogin } from "components";
 
 // styles
 import { HeaderDes, LogoDes, ListDes, ButtonsDes } from "./style";
 
 export default function HeaderDesktop() {
+  const [isOpen, setIsOpen] = useState(false);
+  const showModal = () => {
+    setIsOpen(true);
+  };
+  const onCancel = () => {
+    setIsOpen(false);
+  };
   return (
     <HeaderDes>
       <LogoDes span={6}>
@@ -37,10 +44,16 @@ export default function HeaderDesktop() {
         </ul>
       </ListDes>
       <ButtonsDes span={6}>
-        <Button className="btn__signin" type="outlineRed" size="large">
+        <Button
+          className="btn__signin"
+          type="outlineRed"
+          size="large"
+          onClick={showModal}
+        >
           Đăng nhập
         </Button>
       </ButtonsDes>
+      <ModalLogin title="Login" visible={isOpen} onCancel={onCancel} />
     </HeaderDes>
   );
 }
