@@ -8,7 +8,7 @@ export const TixCarouselStyle = styled(Slider)`
     height: 100% !important;
   }
   .slick-list:hover {
-    .modeo-video__btnPlay {
+    .button-play {
       display: block;
     }
   }
@@ -45,7 +45,7 @@ export const TixCarouselStyle = styled(Slider)`
         }
       }
     }
-    .modeo-video__btnPlay {
+    .button-play {
       position: absolute;
       top: 50%;
       left: 50%;

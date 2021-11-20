@@ -33,6 +33,7 @@ function MovieList() {
             key={index}
             urlImage={movie?.hinhAnh}
             movieName={movie?.tenPhim}
+            trailer={movie?.trailer}
           />
         </div>
       );
@@ -94,6 +95,22 @@ function MovieList() {
           infinite: true,
         },
       },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        },
+      },
     ],
   };
 
@@ -133,6 +150,7 @@ function MovieList() {
                   formatDate(newDate),
                   formatDate(movie.ngayKhoiChieu)
                 )}
+                -Trailer: {movie.trailer.slice(30)}
               </p>
             ))}
           </h1>

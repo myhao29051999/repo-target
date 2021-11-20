@@ -1,0 +1,49 @@
+
+.popup-content {
+    background-color: black !important;
+    width: max-content;
+    padding: 0 !important;
+    height: 450px;
+}
+.modal {
+    font-size: 12px;
+  }
+ 
+  .modal > .content {
+    padding: 0;
+    width: 100%;
+    height: 450px;
+  }
+  .modal > .content iframe{
+      width: 100%;
+      height: 100%;
+  }
+
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  
+  }
+  .button-play{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(110, 110, 109, 0.646);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+  }
+  .button-play .fa-play {
+    line-height: 60px;
+    text-align: center;
+    color: #ffff;
+    display: block;
+  }

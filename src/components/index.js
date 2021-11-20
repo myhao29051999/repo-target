@@ -1,5 +1,5 @@
 import Button from "./Button";
 import Drawer from "./Drawer";
-import ModalVideoCustom from "./ModalVideoCustom";
+import ModalTrailer from "./ModalTrailer";
 
-export { Button, Drawer, ModalVideoCustom };
+export { Button, Drawer, ModalTrailer };
