@@ -3,6 +3,7 @@
     background-color: black !important;
     width: max-content;
     padding: 0 !important;
+    width: 50% !important;
     height: 450px;
 }
 .modal {
