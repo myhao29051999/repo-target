@@ -3,8 +3,9 @@
     background-color: black !important;
     width: max-content;
     padding: 0 !important;
-    width: 50% !important;
+    width: 50%;
     height: 450px;
+    
 }
 .modal {
     font-size: 12px;
@@ -47,4 +48,48 @@
     text-align: center;
     color: #ffff;
     display: block;
+  }
+  @media only screen and (max-width: 1200px){
+    .popup-content{
+      width: 70% !important;
+    }
+  }
+
+  @media only screen and (max-width: 992px){
+    .popup-content{
+      height: 380px !important;
+    }
+    .modal > .content {
+      height: 380px;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .popup-content{
+      width: 75% !important;
+      height: 350px !important;
+    }
+    .modal > .content {
+      height: 350px;
+    }
+  }
+
+  @media only screen and (max-width: 500px){
+    .popup-content{
+      width: 78% !important;
+      height: 250px !important;
+    }
+    .modal > .content {
+      height: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 400px){
+    .popup-content{
+      width: 80% !important;
+      height: 200px !important;
+    }
+    .modal > .content {
+      height: 200px;
+    }
   }

@@ -80,7 +80,7 @@ function MovieList() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1400,
+        breakpoint: 1496,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
