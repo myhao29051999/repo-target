@@ -3,7 +3,17 @@ const variableStyles = {
   primaryRed: "#fb4226",
   primaryWhite: "#FFFFFF",
 
-  textWhite: "#ffffff",
+  // + Text color:
+  textPrimary: "#1C1C28",
+  textSecondary: "#555970",
+  textTertiary: "#9094AC",
+  textDisabled: "#B9BDCA",
+  textWhite: "#FFFFFF",
+  textError: "#EC3C36",
+  textSuccess: "#33B76B",
+  textWarning: "#F5BC33",
+  textInformation: "#009FDA",
+  textFocus: "#3D63DC",
 
   // gradient
   backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",
@@ -12,6 +22,36 @@ const variableStyles = {
   backgroundWhite: "#ffffff",
   backgroundBlack: "#000000",
   backgroundDark: "#111111",
+
+  // + Icon color:
+  iconDefault: "#9A9DB2",
+  iconActive: "#3D63DC",
+  iconHover: "#6E7391",
+  iconDisabled: "#C4C8D6",
+  iconSuccess: "#36C171",
+  iconWarning: "#F5BF3B",
+  iconError: "#ED433E",
+  iconInformation: "#009FDA",
+
+  // + Line/Border color:
+  divider: "#EBEBED",
+  borderDefault: "#DADBE0",
+  borderHover: "#9A9DB2",
+  borderFocus: "#3D63DC",
+  borderError: "#ED433E",
+  borderSuccess: "#36C171",
+  borderWarning: "#F5BF3B",
+
+  // + Surface color:
+  surfaceWhite: "#FFFFFF",
+  surfaceGray: "#F9F9FC",
+  surfaceSky: "#ECF2FD",
+  surfaceSuccess: "#EBFFF3",
+  surfaceWarning: "#FCF6E6",
+  surfaceError: "#FEEAEA",
+  surfaceInformation: "#C9EFFC",
+  surfaceDisabled: "#EEEEF7",
+  surfaceSelected: "#3D63DC",
 
   // Semantic color palette
   warningDark: "#e07a00",

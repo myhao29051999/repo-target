@@ -1,0 +1,3 @@
+export const GET_HE_THONG = "GET_HE_THONG";
+export const GET_HE_THONG_SUCCESS = "GET_HE_THONG_SUCCESS";
+export const GET_HE_THONG_FAILED = "GET_HE_THONG_FAILED";

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
 import { animateScroll as scroll } from "react-scroll";
@@ -25,6 +25,14 @@ function MovieList() {
   const movieList = useSelector((state) => state.movie.movieList);
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
 
+  function checkDateToShowUpcomingMovies(currentDate, someDate) {
+    if (someDate > currentDate) {
+      return true; // sắp chiếu
+    } else {
+      return false; // đang chiếu
+    }
+  }
+
   const renderListMovie = () => {
     return movieList.map((movie, index) => {
       return (
@@ -37,6 +45,32 @@ function MovieList() {
           />
         </div>
       );
+    });
+  };
+
+  const renderUpcomingMovie = () => {
+    let newDate = new Date();
+
+    return movieList.map((movie, index) => {
+      if (
+        checkDateToShowUpcomingMovies(
+          formatDate(newDate),
+          formatDate(movie.ngayKhoiChieu)
+        )
+      ) {
+        return (
+          <div>
+            <MovieCard
+              key={index}
+              urlImage={movie?.hinhAnh}
+              movieName={movie?.tenPhim}
+              trailer={movie?.trailer}
+            />
+          </div>
+        );
+      } else {
+        return <div>Phim sắp chiếu chưa có</div>;
+      }
     });
   };
 
@@ -117,18 +151,6 @@ function MovieList() {
   useEffect(() => {
     dispatch(getMovieList());
   }, []);
-  let newDate = new Date();
-  let date = newDate.getDate();
-  let month = newDate.getMonth() + 1;
-  let year = newDate.getFullYear();
-
-  function checkDate(currentDate, someDate) {
-    if (someDate > currentDate) {
-      return <p>sắp chiếu</p>;
-    } else {
-      return <p>đang chiếu</p>;
-    }
-  }
 
   return (
     <MasterLayout id="showTimes">
@@ -138,23 +160,11 @@ function MovieList() {
             {renderListMovie()}
           </SliderStyle>
         </TabPaneShowTimeStyle>
-        <TabsShowTimeStyle tab="Sắp chiếu" key="2">
-          <h1>{formatDate(newDate, "DD-MM-YYYY")}</h1>
-          <h1>
-            Render ds ngày:{" "}
-            {movieList.map((movie, item) => (
-              <p>
-                -Tên phim: {movie.tenPhim} + Ngày chiếu:{" "}
-                {formatDate(movie.ngayKhoiChieu, "DD-MM-YYYY")} + Check:{" "}
-                {checkDate(
-                  formatDate(newDate),
-                  formatDate(movie.ngayKhoiChieu)
-                )}
-                -Trailer: {movie.trailer.slice(30)}
-              </p>
-            ))}
-          </h1>
-        </TabsShowTimeStyle>
+        <TabPaneShowTimeStyle tab="Sắp chiếu" key="2">
+          <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>
+            {renderUpcomingMovie()}
+          </SliderStyle>
+        </TabPaneShowTimeStyle>
       </TabsShowTimeStyle>
 
       <button onClick={() => scroll.scrollToTop()}>scroll to top</button>

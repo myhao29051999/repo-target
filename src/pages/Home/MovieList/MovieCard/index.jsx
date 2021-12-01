@@ -18,13 +18,7 @@ function MovieCard(props) {
       <MetaStyle />
       <div className="card__black">
         <p>{movieName}</p>
-        <ModalTrailer
-          videoId={
-            trailer.includes("https://www.youtube.com/watch?v=")
-              ? trailer.slice(32)
-              : trailer.slice(30)
-          }
-        />
+        <ModalTrailer videoId={trailer} />
       </div>
     </CardStyle>
   );
