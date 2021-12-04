@@ -42,6 +42,7 @@ function MovieList() {
             urlImage={movie?.hinhAnh}
             movieName={movie?.tenPhim}
             trailer={movie?.trailer}
+            maPhim={movie?.maPhim}
           />
         </div>
       );
