@@ -49,7 +49,7 @@ function HeaderMobile() {
               </Link>
             </li>
             <li>
-              <Link to="showTimes" smooth={true} duration={1000}>
+              <Link to="theaterSystem" smooth={true} duration={1000}>
                 Cụm rạp
               </Link>
             </li>

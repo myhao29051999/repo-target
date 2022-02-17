@@ -2,6 +2,8 @@ const variableStyles = {
   // Color Palette
   primaryRed: "#fb4226",
   primaryWhite: "#FFFFFF",
+  primaryColor600: "#0571FA",
+  primaryColor500: "#4192FB",
 
   // + Text color:
   textPrimary: "#1C1C28",
@@ -14,6 +16,9 @@ const variableStyles = {
   textWarning: "#F5BC33",
   textInformation: "#009FDA",
   textFocus: "#3D63DC",
+  textDarkGray: "#A9A9A9",
+  neutral400: "#9AA5B1",
+  neutral600: "#323F4B",
 
   // gradient
   backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",
@@ -123,6 +128,7 @@ const variableStyles = {
   // Line height
   lineHeight_0: "normal",
   lineHeight_12: "12px",
+  lineHeight_14: "14px",
   lineHeight_16: "16px",
   lineHeight_18: "18px",
   lineHeight_20: "20px",

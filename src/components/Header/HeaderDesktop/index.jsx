@@ -33,7 +33,9 @@ export default function HeaderDesktop() {
             </Link>
           </li>
           <li>
-            <a>Cụm rạp</a>
+            <Link to="theaterSystem" smooth={true} duration={1000}>
+              Cụm rạp
+            </Link>
           </li>
           <li>
             <a>Tin tức</a>
