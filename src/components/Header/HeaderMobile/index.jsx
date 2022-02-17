@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { images } from "constants/images";
 
 // components
-import { Drawer, Button } from "components";
+import { Drawer, Button, ModalLogin } from "components";
 
 // styles
 import {
@@ -19,7 +19,14 @@ import {
 
 function HeaderMobile() {
   const [visible, setVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const showModalLogin = () => {
+    setIsOpen(true);
+  };
+  const onCancelLogin = () => {
+    setIsOpen(false);
+  };
   const showDrawer = () => {
     setVisible(true);
   };
@@ -39,7 +46,7 @@ function HeaderMobile() {
           onClose={onCloseDrawer}
           width={280}
         >
-          <Button type="outlineRed" size="large">
+          <Button type="outlineRed" size="large" onClick={showModalLogin}>
             Đăng nhập
           </Button>
           <HeaderListContentStyle>
@@ -64,6 +71,7 @@ function HeaderMobile() {
               </Link>
             </li>
           </HeaderListContentStyle>
+          <ModalLogin title="Login" visible={isOpen} onCancel={onCancelLogin} />
         </Drawer>
       </HeaderButtonStyle>
     </HeaderMobileStyle>
