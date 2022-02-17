@@ -50,5 +50,5 @@
 }
 
 .back-to-top:hover {
-  background: #fb4226;
+  transform: scale(1.1);
 }
