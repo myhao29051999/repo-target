@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
 import { animateScroll as scroll } from "react-scroll";
-import { Input, Form } from "antd-mobile";
 // utils
 import { formatDate } from "utils";
 
@@ -169,14 +168,6 @@ function MovieList() {
       </TabsShowTimeStyle>
 
       <button onClick={() => scroll.scrollToTop()}>scroll to top</button>
-      <Form layout="vertical">
-        {/* <Form.Item label="Ho va ten" name="username">
-          <Input placeholder="nhap ten" clearable />
-        </Form.Item> */}
-        <Form.Item label="Mat khau" name="password">
-          <Input placeholder="nhap mat khau" clearable type="password" />
-        </Form.Item>
-      </Form>
     </MasterLayout>
   );
 }
