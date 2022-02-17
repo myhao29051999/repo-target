@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
-import { animateScroll as scroll } from "react-scroll";
 // utils
 import { formatDate } from "utils";
 
@@ -45,32 +44,6 @@ function MovieList() {
           />
         </div>
       );
-    });
-  };
-
-  const renderUpcomingMovie = () => {
-    let newDate = new Date();
-
-    return movieList.map((movie, index) => {
-      if (
-        checkDateToShowUpcomingMovies(
-          formatDate(newDate),
-          formatDate(movie.ngayKhoiChieu)
-        )
-      ) {
-        return (
-          <div>
-            <MovieCard
-              key={index}
-              urlImage={movie?.hinhAnh}
-              movieName={movie?.tenPhim}
-              trailer={movie?.trailer}
-            />
-          </div>
-        );
-      } else {
-        return <div>Phim sắp chiếu chưa có!</div>;
-      }
     });
   };
 
@@ -161,13 +134,11 @@ function MovieList() {
           </SliderStyle>
         </TabPaneShowTimeStyle>
         <TabPaneShowTimeStyle tab="Sắp chiếu" key="2">
-          <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>
+          {/* <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>
             {renderUpcomingMovie()}
-          </SliderStyle>
+          </SliderStyle> */}
         </TabPaneShowTimeStyle>
       </TabsShowTimeStyle>
-
-      {/* <button onClick={() => scroll.scrollToTop()}>scroll to top</button> */}
     </MasterLayout>
   );
 }

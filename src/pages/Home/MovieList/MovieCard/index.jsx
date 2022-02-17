@@ -27,7 +27,7 @@ function MovieCard(props) {
       <MetaStyle />
       <div className="card__black">
         <p>{movieName}</p>
-        <button onClick={handleClick}>Xem chi tiết</button>
+        <a onClick={handleClick}>Xem chi tiết</a>
         <ModalTrailer videoId={trailer} />
       </div>
     </CardStyle>

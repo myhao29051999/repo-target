@@ -77,6 +77,7 @@ function App() {
           style={{ cursor: "pointer" }}
           width={50}
           height={50}
+          aria-hidden={true}
         ></Image>
         // <button onClick={scrollToTop} className="back-to-top">
         //   back to top
