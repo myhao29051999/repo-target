@@ -167,7 +167,7 @@ function MovieList() {
         </TabPaneShowTimeStyle>
       </TabsShowTimeStyle>
 
-      <button onClick={() => scroll.scrollToTop()}>scroll to top</button>
+      {/* <button onClick={() => scroll.scrollToTop()}>scroll to top</button> */}
     </MasterLayout>
   );
 }
