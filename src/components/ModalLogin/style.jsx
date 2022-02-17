@@ -135,6 +135,6 @@ export const TitleNoAccount = styled.div`
 
 export const ButtonCreate = styled.div`
   cursor: pointer;
-  color: #fb4226;
+  color: ${variableStyles.primaryRed};
   font-size: ${variableStyles.fontSize_12};
 `;

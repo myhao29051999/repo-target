@@ -2,9 +2,13 @@ import "./App.css";
 // libraries
 import { BrowserRouter, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Image } from "antd-mobile";
 
 // routers
 import { adminRouter, mainRouter } from "./configs/router";
+
+// constants
+import { images } from "constants/images";
 
 // templates
 import RouterMainTemplate from "templates/main";
@@ -65,9 +69,18 @@ function App() {
   return (
     <>
       {showButton && (
-        <button onClick={scrollToTop} className="back-to-top">
-          back to top
-        </button>
+        <Image
+          className="back-to-top"
+          src={images.ICON_BACK_TO_TOP}
+          alt="icon-back-to-top"
+          onClick={scrollToTop}
+          style={{ cursor: "pointer" }}
+          width={50}
+          height={50}
+        ></Image>
+        // <button onClick={scrollToTop} className="back-to-top">
+        //   back to top
+        // </button>
       )}
       <BrowserRouter>
         <Switch>
