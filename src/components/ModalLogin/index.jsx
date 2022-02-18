@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Form } from "antd";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 // constants
 import { images } from "constants/images";
 
+// actions
+import { postLogin } from "store/actions/user.action";
+
 // components
-import { Input } from "components";
+import { Input, InputPassword } from "components";
 
 // styles
 import {
@@ -18,16 +23,33 @@ import {
 
 function ModalLogin(props) {
   const { visible, onCancel, ...other } = props;
+
+  // states
   const [isOpenRegister, setIsOpenRegister] = useState(false);
+  const [user, setUser] = useState({});
+
+  // constants
+  const [form] = Form.useForm();
+  const history = useHistory();
+  const dispatch = useDispatch();
+
   const onOpenModalRegister = () => {
     setIsOpenRegister(true);
   };
+
   const handleCancel = () => {
     setIsOpenRegister(false);
     onCancel();
   };
-  const handleLogin = () => {
-    console.log("login");
+
+  const onSubmitForm = () => {
+    form.submit();
+  };
+
+  const onFinish = (values) => {
+    dispatch(postLogin(values.taiKhoan, values.matKhau, history));
+    handleCancel();
+    form.resetFields();
   };
 
   return (
@@ -42,17 +64,23 @@ function ModalLogin(props) {
       <p className="title-login">
         Đăng nhập để được nhiều ưu đãi, mua vé và bảo mật thông tin!
       </p>
-      <Form layout="vertical">
-        {/* <Form.Item label="Ho va ten" name="username">
-          <Input placeholder="nhap ten" clearable />
-        </Form.Item> */}
-        <Form.Item label="Tài khoản" name="taiKhoan">
-          <Input placeholder="Nhập tài khoản" name="taiKhoan" allowClear />
+      <Form layout="vertical" form={form} onFinish={onFinish}>
+        <Form.Item
+          label="Tài khoản"
+          name="taiKhoan"
+          rules={[{ required: true, message: "Vui lòng nhập tên tài khoản" }]}
+        >
+          <Input placeholder="Nhập tài khoản" name="taiKhoan" />
         </Form.Item>
-        <Form.Item label="Mật khẩu" name="matKhau">
-          <Input placeholder="Nhập mật khẩu" allowClear />
+        <Form.Item
+          label="Mật khẩu"
+          name="matKhau"
+          rules={[{ required: true, message: "Vui lòng nhập mật khẩu" }]}
+        >
+          <InputPassword placeholder="Nhập mật khẩu" />
         </Form.Item>
-        <a href="#" onClick={handleLogin} aria-hidden={true}>
+
+        <a href="#" onClick={onSubmitForm} aria-hidden={true}>
           <span></span>
           <span></span>
           <span></span>

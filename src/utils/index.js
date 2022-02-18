@@ -23,3 +23,11 @@ export function formatDate(d, f) {
   }
   return "";
 }
+
+export function getUserFromLocalStorage() {
+  const user = localStorage.getItem("userLogin");
+  if (user) {
+    return JSON.parse(user);
+  }
+  return null;
+}

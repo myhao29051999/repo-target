@@ -11,6 +11,7 @@ export const HeaderDes = styled.div`
   box-shadow: 0 0 15px rgb(0 0 0 / 30%);
   z-index: 10;
   top: 0;
+  align-items: center;
 `;
 
 export const LogoDes = styled.div`
@@ -21,7 +22,6 @@ export const LogoDes = styled.div`
 `;
 
 export const ListDes = styled.div`
-  margin-top: 15px;
   ul {
     display: flex;
     list-style: none;
@@ -32,7 +32,6 @@ export const ListDes = styled.div`
         margin-right: 20px;
         cursor: pointer;
         color: ${variableStyles.textBlack};
-        font-family: "SF Regular";
         &:hover {
           color: ${variableStyles.primaryRed};
         }
@@ -43,7 +42,16 @@ export const ListDes = styled.div`
 
 export const ButtonsDes = styled.div`
   margin-right: 20px;
-  .btn__signin {
+  /* .btn__signin {
     margin-top: 10px;
-  }
+  } */
+`;
+
+export const UserInfo = styled.div`
+  color: ${variableStyles.textBlack};
+  margin-right: 20px;
+`;
+
+export const GroupLoginSuccess = styled.div`
+  display: flex;
 `;
