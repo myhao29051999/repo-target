@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // libraries
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Image } from "antd-mobile";
 
 // constants
 import { images } from "constants/images";
+
+// utils
+import { getUserFromLocalStorage } from "utils";
 
 // components
 import { Drawer, Button, ModalLogin } from "components";
@@ -15,11 +19,14 @@ import {
   HeaderLogoStyle,
   HeaderButtonStyle,
   HeaderListContentStyle,
+  UserInfo,
+  GroupLoginSuccess,
 } from "./style";
 
 function HeaderMobile() {
   const [visible, setVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [userName, setUserName] = useState("");
 
   const showModalLogin = () => {
     setIsOpen(true);
@@ -34,6 +41,20 @@ function HeaderMobile() {
     setVisible(false);
   };
 
+  const onLogout = () => {
+    localStorage.removeItem("userLogin");
+    setUserName("");
+  };
+
+  useEffect(() => {
+    const user = getUserFromLocalStorage();
+    if (user !== null) {
+      setUserName(user?.hoTen);
+    } else {
+      setUserName("");
+    }
+  });
+
   return (
     <HeaderMobileStyle>
       <HeaderLogoStyle>
@@ -46,9 +67,29 @@ function HeaderMobile() {
           onClose={onCloseDrawer}
           width={280}
         >
-          <Button type="outlineRed" size="large" onClick={showModalLogin}>
-            Đăng nhập
-          </Button>
+          {userName !== "" ? (
+            <GroupLoginSuccess>
+              <UserInfo>Xin chào {userName}</UserInfo>
+              <Image
+                src={images.ICON_LOGOUT}
+                alt="icon-logout"
+                aria-hidden="true"
+                height={25}
+                width={25}
+                style={{ cursor: "pointer", display: "block" }}
+                onClick={onLogout}
+              />
+            </GroupLoginSuccess>
+          ) : (
+            <Button
+              className="btn__signin"
+              type="outlineRed"
+              size="large"
+              onClick={showModalLogin}
+            >
+              Đăng nhập
+            </Button>
+          )}
           <HeaderListContentStyle>
             <li>
               <Link to="showTimes" smooth={true} duration={1000}>

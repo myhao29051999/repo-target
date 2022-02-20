@@ -5,7 +5,9 @@ import ModalLogin from "./ModalLogin";
 import Input from "./Inputs";
 import InputPassword from "./Inputs/InputPassword";
 import Label from "./Label";
+import Header from "./Header";
 export {
+  Header,
   Button,
   Drawer,
   ModalTrailer,

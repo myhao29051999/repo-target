@@ -1,18 +1,22 @@
 import "./App.css";
 // libraries
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Image } from "antd-mobile";
 
-// routers
-import { adminRouter, mainRouter } from "./configs/router";
+// HOC
+import Auth from "HOC";
 
 // constants
 import { images } from "constants/images";
 
-// templates
-import RouterMainTemplate from "templates/main";
-import RouterAdminTemplate from "templates/admin";
+// configs
+import { paths } from "configs/path";
+
+// pages
+import HomePage from "pages/Home";
+import MovieDetail from "pages/Home/MovieDetail";
+import AdminPage from "pages/Admin/Dashboard";
 
 // css
 import "antd/dist/antd.css";
@@ -29,30 +33,6 @@ function App() {
     window.scrollTo({
       top: 0,
       behavior: "smooth", // for smoothly scrolling
-    });
-  };
-
-  const renderMainRouter = () => {
-    return mainRouter.map(({ path, exact, Component }) => {
-      return (
-        <RouterMainTemplate
-          path={path}
-          exact={exact}
-          Component={Component}
-        ></RouterMainTemplate>
-      );
-    });
-  };
-
-  const renderAdminRouter = () => {
-    return adminRouter.map(({ path, exact, Component }) => {
-      return (
-        <RouterAdminTemplate
-          path={path}
-          exact={exact}
-          Component={Component}
-        ></RouterAdminTemplate>
-      );
     });
   };
 
@@ -79,14 +59,16 @@ function App() {
           height={50}
           aria-hidden={true}
         ></Image>
-        // <button onClick={scrollToTop} className="back-to-top">
-        //   back to top
-        // </button>
       )}
       <BrowserRouter>
         <Switch>
-          {renderMainRouter()}
-          {renderAdminRouter()}
+          <Route exact={true} path={paths.HOMEPAGE} component={HomePage} />
+          <Auth
+            exact={false}
+            path={paths.MOVIE_DETAIL + ":maPhim"}
+            Component={MovieDetail}
+          />
+          <Auth exact={false} path={paths.ADMINPAGE} Component={AdminPage} />
         </Switch>
       </BrowserRouter>
     </>

@@ -44,3 +44,11 @@ export const HeaderListContentStyle = styled.ul`
     }
   }
 `;
+export const UserInfo = styled.div`
+  color: ${variableStyles.textBlack};
+  margin-right: 10px;
+`;
+
+export const GroupLoginSuccess = styled.div`
+  display: flex;
+`;
