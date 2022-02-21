@@ -4,9 +4,11 @@ import {
   LOGIN_SUCCESS,
   GET_USER_LIST_SUCCESS,
   GET_USER_LIST_FAILED,
+  REGISTER_FAILED,
+  REGISTER_SUCCESS,
 } from "../constants/user.const";
 import { startLoading, stopLoading } from "./common.action";
-//
+// login
 const postLoginSuccess = (userList) => {
   return {
     type: LOGIN_SUCCESS,
@@ -42,6 +44,7 @@ export const postLogin = (taiKhoan, matKhau, history) => {
         history.goBack();
       })
       .catch((err) => {
+        alert("Tên tài khoản hoặc mật khẩu không chính xác");
         dispatch(stopLoading());
         //gửi lên store
         dispatch(postLoginFailed(err));
@@ -49,6 +52,44 @@ export const postLogin = (taiKhoan, matKhau, history) => {
   };
 };
 
+// register
+const registerSuccess = (data) => {
+  return {
+    type: REGISTER_SUCCESS,
+    payload: data,
+  };
+};
+
+const registerFailed = (err) => {
+  return {
+    type: REGISTER_FAILED,
+    payload: err,
+  };
+};
+
+export const registerAccount = (params) => {
+  return (dispatch) => {
+    dispatch(startLoading());
+
+    axios({
+      method: "POST",
+      url: "https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangKy",
+      data: params,
+    })
+      .then((res) => {
+        dispatch(stopLoading());
+        dispatch(registerSuccess(res.data));
+      })
+      .catch((err) => {
+        alert("Đăng ký không thành công");
+        console.log("dki k thành công", err);
+        dispatch(stopLoading);
+        dispatch(registerFailed(err));
+      });
+  };
+};
+
+// get list users
 export const getUserList = () => {
   return (dispatch) => {
     dispatch(startLoading());
