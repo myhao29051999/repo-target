@@ -10,6 +10,7 @@ import IMG_CNS from "assets/images/home/cns.jpg";
 import IMG_GALAXY from "assets/images/home/galaxy.jpg";
 import IMG_LOTTE from "assets/images/home/lotte.jpg";
 import IMG_MEGA from "assets/images/home/mega.jpg";
+import IMG_BG_GRAY from "assets/images/home/background-transparent-gray.png";
 // icons
 import ICON_BACK_TO_TOP from "assets/images/icons/icon-back-to-top.svg";
 import ICON_LOGOUT from "assets/images/icons/icon-logout.svg";
@@ -27,5 +28,6 @@ const images = {
   IMG_GALAXY,
   IMG_LOTTE,
   IMG_MEGA,
+  IMG_BG_GRAY,
 };
 export { images };
