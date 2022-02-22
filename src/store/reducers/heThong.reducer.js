@@ -8,7 +8,7 @@ import {
 const initialState = {
   systemList: [],
   errors: {},
-  thongTinCumRap: {},
+  thongTinCumRap: [],
 };
 
 const lichChieuHeThongReducer = (state = initialState, action) => {

@@ -19,6 +19,12 @@ const variableStyles = {
   textDarkGray: "#A9A9A9",
   neutral400: "#9AA5B1",
   neutral600: "#323F4B",
+  textBhdStar: "#8bc541",
+  textCNS: "#df0d7a",
+  textMega: "#e5a813",
+  textLotte: "#ca4137",
+  textGalaxy: "#F2C23D",
+  textCGV: "#F7220A",
 
   // gradient
   backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",
