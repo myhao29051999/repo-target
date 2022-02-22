@@ -4,6 +4,7 @@ import variableStyles from "styles/variable-styles";
 export const TheaterCardStyle = styled.div`
   display: flex;
   cursor: pointer;
+  opacity: 0.6;
 `;
 
 export const InfoTheater = styled.div`

@@ -40,7 +40,7 @@ function TheaterSystem() {
   const [maHeThongRap, setMaHeThongRap] = useState("BHDStar");
   const [active, setActive] = useState();
   const [listFilm, setListFilms] = useState([]);
-  const [lichChieuTheoPhim, setLichChieuTheoPhim] = useState([]);
+  const [activeTheaterCard, setActiveTheaterCard] = useState();
 
   const onGetMaHeThongRap = (item) => {
     setMaHeThongRap(item?.maHeThongRap);
@@ -78,6 +78,7 @@ function TheaterSystem() {
   };
 
   const onRenderListFilmsWithMaCumRap = (item) => {
+    setActiveTheaterCard(item.maCumRap);
     let lstCumRap = lichChieuHeThongRap.map((item) => {
       return item?.lstCumRap;
     });
@@ -126,6 +127,12 @@ function TheaterSystem() {
           {cumRap.map((item, index) => (
             <DivCover>
               <TheaterCard
+                className={
+                  item.maCumRap === activeTheaterCard
+                    ? "theaterCard-active"
+                    : ""
+                }
+                // className="aaaaahh"
                 key={index}
                 image={onRenderImageTheater()}
                 type={onGetTypeTheater()}

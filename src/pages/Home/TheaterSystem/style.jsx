@@ -8,6 +8,9 @@ export const TheaterContent = styled(Row)`
   .img-active {
     opacity: 1;
   }
+  .theaterCard-active {
+    opacity: 1;
+  }
 `;
 
 export const ColImgTheater = styled(Col)`

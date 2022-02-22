@@ -12,8 +12,16 @@ import {
   MoreInfo,
 } from "./style";
 function TheaterCard(props) {
-  const { type, name, image, address, listTheaters, onClick, ...orther } =
-    props;
+  const {
+    type,
+    name,
+    image,
+    address,
+    listTheaters,
+    onClick,
+    className,
+    ...orther
+  } = props;
 
   // states
   const [isShowMoreInfo, setIsShowMoreInfo] = useState(false);
@@ -29,7 +37,11 @@ function TheaterCard(props) {
   };
 
   return (
-    <TheaterCardStyle aria-hidden={true} onClick={onClick}>
+    <TheaterCardStyle
+      aria-hidden={true}
+      onClick={onClick}
+      className={className}
+    >
       <Image width={50} height={50} src={image} alt="img-cinema" />
       <InfoTheater>
         <TheaterName type={type}>{name}</TheaterName>
@@ -63,5 +75,6 @@ TheaterCard.propTypes = {
   address: PropTypes.string,
   listTheaters: PropTypes.any,
   onClick: PropTypes.func,
+  className: PropTypes.string,
 };
 export default TheaterCard;

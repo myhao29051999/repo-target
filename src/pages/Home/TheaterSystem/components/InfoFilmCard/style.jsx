@@ -30,6 +30,7 @@ export const FilmDate = styled.div`
   padding: 10px 10px;
   border-radius: 8px;
   cursor: pointer;
+  background-color: rgba(246, 246, 246, 0.5);
 `;
 
 export const ButtonDetail = styled.div`

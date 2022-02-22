@@ -26,6 +26,7 @@ function ModalLogin(props) {
 
   // states
   const [isOpenRegister, setIsOpenRegister] = useState(false);
+  const [isShowSuggest, setIsShowSuggest] = useState(true);
   const [user, setUser] = useState({});
 
   // constants
@@ -35,10 +36,12 @@ function ModalLogin(props) {
 
   const onOpenModalRegister = () => {
     setIsOpenRegister(true);
+    setIsShowSuggest(false);
   };
 
   const handleCancel = () => {
     setIsOpenRegister(false);
+    setIsShowSuggest(true);
     onCancel();
   };
 
@@ -156,12 +159,14 @@ function ModalLogin(props) {
           {isOpenRegister ? "Đăng ký" : "Đăng nhập"}
         </a>
       </Form>
-      <CreateAccountGroup>
-        <TitleNoAccount>Bạn chưa có tài khoản?</TitleNoAccount>
-        <ButtonCreate onClick={onOpenModalRegister}>
-          Đăng ký ngay nào
-        </ButtonCreate>
-      </CreateAccountGroup>
+      {isShowSuggest && (
+        <CreateAccountGroup>
+          <TitleNoAccount>Bạn chưa có tài khoản?</TitleNoAccount>
+          <ButtonCreate onClick={onOpenModalRegister}>
+            Đăng ký ngay nào
+          </ButtonCreate>
+        </CreateAccountGroup>
+      )}
     </ModalLoginStyle>
   );
 }
