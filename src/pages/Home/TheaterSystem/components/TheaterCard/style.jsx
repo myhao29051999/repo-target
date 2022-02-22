@@ -3,10 +3,12 @@ import variableStyles from "styles/variable-styles";
 
 export const TheaterCardStyle = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  cursor: pointer;
 `;
 
-export const InfoTheater = styled.div``;
+export const InfoTheater = styled.div`
+  margin-left: 16px;
+`;
 
 export const TheaterName = styled.div`
   font-size: ${variableStyles.fontSize_14};
@@ -29,4 +31,30 @@ export const TheaterName = styled.div`
         return "black";
     }
   }};
+`;
+
+export const TheaterAddress = styled.div`
+  color: ${variableStyles.textGray};
+  font-size: ${variableStyles.fontSize_12};
+  font-weight: normal;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 4px 0;
+`;
+
+export const ButtonDetail = styled.div`
+  color: ${variableStyles.primaryRed};
+  font-size: ${variableStyles.fontSize_12};
+  font-weight: normal;
+  cursor: pointer;
+`;
+
+export const MoreInfo = styled.div`
+  color: ${variableStyles.textGray};
+  font-size: ${variableStyles.fontSize_12};
+  font-weight: normal;
+  width: 200px;
+  max-width: 200px;
 `;

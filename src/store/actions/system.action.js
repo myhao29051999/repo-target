@@ -3,6 +3,8 @@ import {
   GET_HE_THONG_FAILED,
   GET_THONG_TIN_CUM_RAP_THEO_HE_THONG_SUCCESS,
   GET_THONG_TIN_CUM_RAP_THEO_HE_THONG_FAILED,
+  GET_THONG_TIN_LICH_CHIEU_HE_THONG_RAP_SUCCESS,
+  GET_THONG_TIN_LICH_CHIEU_HE_THONG_RAP_FAILED,
 } from "../constants/heThong.const";
 
 import axios from "axios";
@@ -50,10 +52,10 @@ const getListTheaterSystemFailed = (err) => {
 
 // Lay thong tin cum rap theo he thong
 
-const getThongTinCumRapTheoHeThongSuccess = (maHeThongRap) => {
+const getThongTinCumRapTheoHeThongSuccess = (listThongTin) => {
   return {
     type: GET_THONG_TIN_CUM_RAP_THEO_HE_THONG_SUCCESS,
-    payload: maHeThongRap,
+    payload: listThongTin,
   };
 };
 
@@ -80,6 +82,42 @@ export const getThongTinCumRapTheoHeThong = (maHeThongRap) => {
       .catch((err) => {
         dispatch(stopLoading());
         dispatch(getThongTinCumRapTheoHeThongFailed(err));
+      });
+  };
+};
+
+// Lay thong tin lịch chiếu hệ thống rạp
+
+const getThongTinLichChieuHeThongRapSuccess = (listThongTin) => {
+  return {
+    type: GET_THONG_TIN_LICH_CHIEU_HE_THONG_RAP_SUCCESS,
+    payload: listThongTin,
+  };
+};
+
+const getThongTinLichChieuHeThongRapFailed = (err) => {
+  return {
+    type: GET_THONG_TIN_LICH_CHIEU_HE_THONG_RAP_FAILED,
+    payload: err,
+  };
+};
+
+export const getThongTinLichChieuHeThongRap = (maHeThongRap) => {
+  return (dispatch) => {
+    dispatch(startLoading());
+
+    axios({
+      method: "GET",
+      url: `https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${maHeThongRap}&maNhom=GP02`,
+      data: null,
+    })
+      .then((res) => {
+        dispatch(stopLoading());
+        dispatch(getThongTinLichChieuHeThongRapSuccess(res.data));
+      })
+      .catch((err) => {
+        dispatch(stopLoading());
+        dispatch(getThongTinLichChieuHeThongRapFailed(err));
       });
   };
 };

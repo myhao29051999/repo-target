@@ -13,6 +13,7 @@ export default function Home() {
       <TixCarousel />
       <MovieList />
       <TheaterSystem />
+      <b>From: a pretty girl My Hao</b>
     </div>
   );
 }

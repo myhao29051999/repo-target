@@ -25,6 +25,7 @@ const variableStyles = {
   textLotte: "#ca4137",
   textGalaxy: "#F2C23D",
   textCGV: "#F7220A",
+  textGray: "949494",
 
   // gradient
   backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",

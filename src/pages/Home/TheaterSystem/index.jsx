@@ -9,13 +9,15 @@ import MasterLayout from "layouts/MasterLayout";
 import {
   getListTheaterSystem,
   getThongTinCumRapTheoHeThong,
+  getThongTinLichChieuHeThongRap,
 } from "store/actions/system.action";
 
 // constants
 import { images } from "constants/images";
 
 // components
-import TheaterCard from "./TheaterCard";
+import TheaterCard from "./components/TheaterCard";
+import FilmCard from "./components/InfoFilmCard";
 
 // styles
 import {
@@ -29,11 +31,15 @@ import {
 function TheaterSystem() {
   const theaterList = useSelector((state) => state.system.systemList);
   const cumRap = useSelector((state) => state.system.thongTinCumRap);
+  const lichChieuHeThongRap = useSelector(
+    (state) => state.system.thongTinLichChieuHeThongRap
+  );
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
 
   // state
   const [maHeThongRap, setMaHeThongRap] = useState("BHDStar");
   const [active, setActive] = useState();
+  const [listFilm, setListFilms] = useState([]);
 
   const onGetMaHeThongRap = (item) => {
     setMaHeThongRap(item?.maHeThongRap);
@@ -70,6 +76,22 @@ function TheaterSystem() {
     return images.IMG_MEGA;
   };
 
+  const onRenderListFilmsWithMaCumRap = (item) => {
+    let lstCumRap = lichChieuHeThongRap.map((item) => {
+      return item?.lstCumRap;
+    });
+    let lstFilter = [];
+    lstCumRap.map((i) => {
+      lstFilter = i.filter((file) => {
+        return file.maCumRap === item.maCumRap;
+      });
+    });
+    lstFilter.map((i) => {
+      // console.log("ds film", i?.danhSachPhim);
+      setListFilms(i?.danhSachPhim);
+    });
+  };
+
   useEffect(() => {
     dispatch(getListTheaterSystem());
   }, []);
@@ -77,6 +99,7 @@ function TheaterSystem() {
   useEffect(() => {
     if (maHeThongRap !== "") {
       dispatch(getThongTinCumRapTheoHeThong(maHeThongRap));
+      dispatch(getThongTinLichChieuHeThongRap(maHeThongRap));
     }
   }, [maHeThongRap]);
 
@@ -100,15 +123,30 @@ function TheaterSystem() {
         </ColImgTheater>
         <ColInfoTheater span={8}>
           {cumRap.map((item, index) => (
-            <TheaterCard
-              key={index}
-              image={onRenderImageTheater()}
-              type={onGetTypeTheater()}
-              name={item?.tenCumRap}
-            />
+            <DivCover>
+              <TheaterCard
+                key={index}
+                image={onRenderImageTheater()}
+                type={onGetTypeTheater()}
+                name={item?.tenCumRap}
+                address={item?.diaChi}
+                listTheaters={item?.danhSachRap}
+                onClick={() => onRenderListFilmsWithMaCumRap(item)}
+              />
+            </DivCover>
           ))}
         </ColInfoTheater>
-        <ColImgTheater span={12}></ColImgTheater>
+        <ColInfoTheater span={12}>
+          {listFilm.map((item, index) => (
+            <DivCover>
+              <FilmCard
+                key={index}
+                image={item?.hinhAnh}
+                name={item?.tenPhim}
+              />
+            </DivCover>
+          ))}
+        </ColInfoTheater>
       </TheaterContent>
     </MasterLayout>
   );

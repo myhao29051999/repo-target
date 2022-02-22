@@ -16,8 +16,8 @@ export const ColImgTheater = styled(Col)`
 `;
 
 export const ColInfoTheater = styled(Col)`
-  padding: 20px 20px;
-  max-height: 710px;
+  padding: 0px 20px;
+  max-height: 610px;
   overflow-y: scroll;
   border-left: 1px solid ${variableStyles.borderLightGray};
   &::-webkit-scrollbar {
