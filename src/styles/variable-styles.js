@@ -46,7 +46,7 @@ const variableStyles = {
   borderError: "#ED433E",
   borderSuccess: "#36C171",
   borderWarning: "#F5BF3B",
-
+  borderLightGray: "#ebebec",
   // + Surface color:
   surfaceWhite: "#FFFFFF",
   surfaceGray: "#F9F9FC",

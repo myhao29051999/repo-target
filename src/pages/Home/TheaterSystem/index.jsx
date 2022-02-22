@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
-import { animateScroll as scroll } from "react-scroll";
-
-// utils
-import { formatDate } from "utils";
 
 // layouts
 import MasterLayout from "layouts/MasterLayout";
 
 // actions
-import { getMovieList } from "store/actions/movie.action";
-import { getListTheaterSystem } from "store/actions/system.action";
+import {
+  getListTheaterSystem,
+  getThongTinCumRapTheoHeThong,
+} from "store/actions/system.action";
 
 // constants
 import { images } from "constants/images";
@@ -19,21 +17,49 @@ import { images } from "constants/images";
 // components
 
 // styles
-import {} from "./style";
+import { TheaterContent, ColImgTheater, ImgTheater, DivCover } from "./style";
 
 function TheaterSystem() {
-  const systemList = useSelector((state) => state.system.systemList);
+  const theaterList = useSelector((state) => state.system.systemList);
+  const thongTinCumRap = useSelector((state) => state.system.thongTinCumRap);
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
+
+  // state
+  const [maHeThongRap, setMaHeThongRap] = useState("BHDStar");
+  const [active, setActive] = useState();
+
+  const onGetMaHeThongRap = (item) => {
+    setMaHeThongRap(item?.maHeThongRap);
+    setActive(item?.maHeThongRap);
+  };
 
   useEffect(() => {
     dispatch(getListTheaterSystem());
   }, []);
 
+  useEffect(() => {
+    dispatch(getThongTinCumRapTheoHeThong(maHeThongRap));
+  }, [maHeThongRap]);
+
   return (
     <MasterLayout id="theaterSystem">
-      {systemList.map((system, index) => (
-        <p key={index}>Tên hệ thống: {system.tenHeThongRap}</p>
-      ))}
+      <TheaterContent>
+        <ColImgTheater span={4}>
+          {theaterList.map((item, index) => (
+            <DivCover key={index}>
+              <ImgTheater
+                key={index}
+                className={item?.maHeThongRap === active ? "img-active" : ""}
+                src={item?.logo}
+                aria-hidden={true}
+                onClick={() => onGetMaHeThongRap(item)}
+              />
+            </DivCover>
+          ))}
+        </ColImgTheater>
+        <ColImgTheater span={8}></ColImgTheater>
+        <ColImgTheater span={12}></ColImgTheater>
+      </TheaterContent>
     </MasterLayout>
   );
 }

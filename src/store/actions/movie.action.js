@@ -69,7 +69,6 @@ export const getMovieDetail = (movieCode) => {
     })
       .then((res) => {
         dispatch(stopLoading());
-        console.log(res.data);
         //gửi lên store
         dispatch(getMovieDetailSuccess(res.data));
       })
