@@ -40,6 +40,7 @@ function TheaterSystem() {
   const [maHeThongRap, setMaHeThongRap] = useState("BHDStar");
   const [active, setActive] = useState();
   const [listFilm, setListFilms] = useState([]);
+  const [lichChieuTheoPhim, setLichChieuTheoPhim] = useState([]);
 
   const onGetMaHeThongRap = (item) => {
     setMaHeThongRap(item?.maHeThongRap);
@@ -87,7 +88,7 @@ function TheaterSystem() {
       });
     });
     lstFilter.map((i) => {
-      // console.log("ds film", i?.danhSachPhim);
+      console.log("ds film", i?.danhSachPhim);
       setListFilms(i?.danhSachPhim);
     });
   };
@@ -143,6 +144,7 @@ function TheaterSystem() {
                 key={index}
                 image={item?.hinhAnh}
                 name={item?.tenPhim}
+                listFilms={item?.lstLichChieuTheoPhim}
               />
             </DivCover>
           ))}

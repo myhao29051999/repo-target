@@ -25,7 +25,7 @@ const variableStyles = {
   textLotte: "#ca4137",
   textGalaxy: "#F2C23D",
   textCGV: "#F7220A",
-  textGray: "949494",
+  textGray: "#949494",
 
   // gradient
   backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",
@@ -54,6 +54,7 @@ const variableStyles = {
   borderSuccess: "#36C171",
   borderWarning: "#F5BF3B",
   borderLightGray: "#ebebec",
+  borderLighGray2: "#e4e4e4",
   // + Surface color:
   surfaceWhite: "#FFFFFF",
   surfaceGray: "#F9F9FC",
