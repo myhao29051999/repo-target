@@ -11,6 +11,18 @@ import IMG_GALAXY from "assets/images/home/galaxy.jpg";
 import IMG_LOTTE from "assets/images/home/lotte.jpg";
 import IMG_MEGA from "assets/images/home/mega.jpg";
 import IMG_BG_GRAY from "assets/images/home/background-transparent-gray.png";
+import IMG_KM1 from "assets/images/home/km1.jpg";
+import IMG_KM2 from "assets/images/home/km2.jpg";
+import IMG_KM3 from "assets/images/home/km3.jpg";
+import IMG_KM4 from "assets/images/home/km4.jpg";
+import IMG_KM5 from "assets/images/home/km5.png";
+import IMG_KM6 from "assets/images/home/km6.png";
+import IMG_KM7 from "assets/images/home/km7.jpg";
+import IMG_KM8 from "assets/images/home/km8.jpg";
+import IMG_SK1 from "assets/images/home/sk1.jpg";
+import IMG_SK2 from "assets/images/home/sk2.jpg";
+import IMG_SK3 from "assets/images/home/sk3.jpg";
+import IMG_SK4 from "assets/images/home/sk4.jpg";
 // icons
 import ICON_BACK_TO_TOP from "assets/images/icons/icon-back-to-top.svg";
 import ICON_LOGOUT from "assets/images/icons/icon-logout.svg";
@@ -29,5 +41,17 @@ const images = {
   IMG_LOTTE,
   IMG_MEGA,
   IMG_BG_GRAY,
+  IMG_KM1,
+  IMG_KM2,
+  IMG_KM3,
+  IMG_KM4,
+  IMG_KM5,
+  IMG_KM6,
+  IMG_KM7,
+  IMG_KM8,
+  IMG_SK1,
+  IMG_SK2,
+  IMG_SK3,
+  IMG_SK4,
 };
 export { images };

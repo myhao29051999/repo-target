@@ -6,7 +6,7 @@ export const NewsContent = styled.div`
     margin: 0;
   }
   .ant-tabs-card .ant-tabs-content {
-    height: 120px;
+    height: 600px;
     margin-top: -16px;
   }
   .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
@@ -73,6 +73,9 @@ export const NewsContent = styled.div`
     text-shadow: 0 0 0.25px currentColor;
     transform: scale(1);
     margin-right: 0px;
+  }
+  .img-news {
+    cursor: pointer;
   }
 `;
 export const NewsItem = styled.div``;
