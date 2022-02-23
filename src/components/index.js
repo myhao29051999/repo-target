@@ -6,6 +6,7 @@ import Input from "./Inputs";
 import InputPassword from "./Inputs/InputPassword";
 import Label from "./Label";
 import Header from "./Header";
+import Footer from "./Footer";
 export {
   Header,
   Button,
@@ -15,4 +16,5 @@ export {
   Input,
   InputPassword,
   Label,
+  Footer,
 };

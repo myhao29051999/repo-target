@@ -53,12 +53,10 @@ function ModalLogin(props) {
     dispatch(postLogin(values.taiKhoan, values.matKhau, history));
     handleCancel();
     form.resetFields();
-    console.log("đăng nhập");
   };
 
   const onFinishRegister = (values) => {
     const body = { maLoaiNguoiDung: "KhachHang", maNhom: "GP02", ...values };
-    console.log("body", body);
     dispatch(registerAccount(body));
     handleCancel();
     form.resetFields();

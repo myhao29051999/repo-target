@@ -5,7 +5,14 @@ import { images } from "constants/images";
 export const ApplicationContainer = styled.section`
   background: url(${images.BG_APP_SECTION});
   position: relative;
-  height: 650px;
+  min-height: 650px;
+  margin-top: 120px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 export const ApplicationContent = styled.div`

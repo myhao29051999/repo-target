@@ -40,6 +40,36 @@ import IMG_SLIDE7 from "assets/images/home/slide7.jpg";
 import ICON_BACK_TO_TOP from "assets/images/icons/icon-back-to-top.svg";
 import ICON_LOGOUT from "assets/images/icons/icon-logout.svg";
 
+// icons in footer
+import ICON_PARTNER1 from "assets/images/icons/dt1.png";
+import ICON_PARTNER2 from "assets/images/icons/dt2.png";
+import ICON_PARTNER3 from "assets/images/icons/dt3.png";
+import ICON_PARTNER4 from "assets/images/icons/dt4.png";
+import ICON_PARTNER5 from "assets/images/icons/dt5.png";
+import ICON_PARTNER6 from "assets/images/icons/dt6.png";
+import ICON_PARTNER7 from "assets/images/icons/dt7.jpg";
+import ICON_PARTNER8 from "assets/images/icons/dt8.png";
+import ICON_PARTNER9 from "assets/images/icons/dt9.png";
+import ICON_PARTNER10 from "assets/images/icons/dt10.jpg";
+import ICON_PARTNER11 from "assets/images/icons/dt11.png";
+import ICON_PARTNER12 from "assets/images/icons/dt12.png";
+import ICON_PARTNER13 from "assets/images/icons/dt13.png";
+import ICON_PARTNER14 from "assets/images/icons/dt14.jpg";
+import ICON_PARTNER15 from "assets/images/icons/dt15.png";
+import ICON_PARTNER16 from "assets/images/icons/dt16.png";
+import ICON_PARTNER17 from "assets/images/icons/dt17.png";
+import ICON_PARTNER18 from "assets/images/icons/dt18.png";
+import ICON_PARTNER19 from "assets/images/icons/dt19.png";
+import ICON_PARTNER20 from "assets/images/icons/dt20.png";
+
+import ICON_SOCIAL1 from "assets/images/icons/s1.png";
+import ICON_SOCIAL2 from "assets/images/icons/s2.png";
+import ICON_SOCIAL3 from "assets/images/icons/s3.png";
+import ICON_SOCIAL4 from "assets/images/icons/s4.png";
+
+import ICON_BRAND1 from "assets/images/icons/brand1.jpg";
+import ICON_BRAND2 from "assets/images/icons/brand2.png";
+
 const images = {
   LOGO,
   IMG_SIDE_BAR,
@@ -75,5 +105,31 @@ const images = {
   IMG_SLIDE5,
   IMG_SLIDE6,
   IMG_SLIDE7,
+  ICON_PARTNER1,
+  ICON_PARTNER2,
+  ICON_PARTNER3,
+  ICON_PARTNER4,
+  ICON_PARTNER5,
+  ICON_PARTNER6,
+  ICON_PARTNER7,
+  ICON_PARTNER8,
+  ICON_PARTNER9,
+  ICON_PARTNER10,
+  ICON_PARTNER11,
+  ICON_PARTNER12,
+  ICON_PARTNER13,
+  ICON_PARTNER14,
+  ICON_PARTNER15,
+  ICON_PARTNER16,
+  ICON_PARTNER17,
+  ICON_PARTNER18,
+  ICON_PARTNER19,
+  ICON_PARTNER20,
+  ICON_SOCIAL1,
+  ICON_SOCIAL2,
+  ICON_SOCIAL3,
+  ICON_SOCIAL4,
+  ICON_BRAND1,
+  ICON_BRAND2,
 };
 export { images };

@@ -47,12 +47,7 @@ export const StyledButton = styled(Button)`
           return variableStyles.primaryRed;
         case "primaryRed":
           return variableStyles.primaryWhite;
-        // case "outlinePink":
-        //   return variableStyles.primaryPink;
-        // case "outlineGray":
-        //   return variableStyles.textPrimary;
-        // case "outlineWhite":
-        //   return variableStyles.backgroundWhite;
+
         default:
           return variableStyles.backgroundWhite;
       }
@@ -61,14 +56,7 @@ export const StyledButton = styled(Button)`
       switch (props.type) {
         case "outlineRed":
           return variableStyles.primaryRed;
-        // case "outlinePink":
-        //   return variableStyles.primaryPink;
-        // case "primaryPink":
-        //   return variableStyles.primaryPink;
-        // case "outlineGray":
-        //   return variableStyles.textPrimary;
-        // case "outlineWhite":
-        //   return variableStyles.backgroundWhite;
+
         default:
           return "transparent";
       }
@@ -96,17 +84,7 @@ export const StyledButton = styled(Button)`
             return variableStyles.textWhite;
         }
       }};
-      /* border-color: ${(props) => {
-        switch (props.type) {
-          case "primary":
-            return variableStyles.jeans400;
-          case "outline":
-            return variableStyles.jeans500;
 
-          default:
-            return variableStyles.neutral0;
-        }
-      }}; */
       background: ${(props) => {
         switch (props.type) {
           case "outlineRed":
@@ -118,6 +96,9 @@ export const StyledButton = styled(Button)`
             return "transparent";
         }
       }};
+    }
+    &:focus {
+      transform: scale(95%);
     }
   }
 `;

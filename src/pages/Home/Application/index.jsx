@@ -26,7 +26,7 @@ function Application() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false,
@@ -54,7 +54,7 @@ function Application() {
               App miễn phí - Tải về ngay!
             </Button>
             <SubTitle2>
-              Tin có 2 phiên bản <NameApp>iOS</NameApp> &{" "}
+              Tix có 2 phiên bản <NameApp>iOS</NameApp> &{" "}
               <NameApp>Android</NameApp>
             </SubTitle2>
           </div>
