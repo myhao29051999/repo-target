@@ -14,6 +14,11 @@ export const ApplicationContent = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   color: ${variableStyles.primaryWhite};
+  width: 60%;
+  margin: 0 auto;
+  .application-info {
+    margin-top: 24px;
+  }
   .slide-group {
     position: relative;
     .slider {
@@ -25,5 +30,41 @@ export const ApplicationContent = styled.div`
         border-radius: 20px;
       }
     }
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+`;
+
+export const AppRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Title = styled.div`
+  color: ${variableStyles.primaryWhite};
+  font-size: ${variableStyles.fontSize_32};
+  font-weight: ${variableStyles.fwStrongBold};
+`;
+
+export const SubTitle = styled.div`
+  color: ${variableStyles.primaryWhite};
+  font-size: ${variableStyles.fontSize_18};
+  font-weight: normal;
+  margin: 16px 0;
+`;
+
+export const SubTitle2 = styled.div`
+  color: ${variableStyles.primaryWhite};
+  font-size: ${variableStyles.fontSize_14};
+  font-weight: normal;
+  margin: 16px 0;
+`;
+
+export const NameApp = styled.a`
+  color: ${variableStyles.primaryWhite};
+  border-bottom: 1px solid ${variableStyles.primaryWhite};
+  &:hover {
+    color: ${variableStyles.primaryRed};
   }
 `;

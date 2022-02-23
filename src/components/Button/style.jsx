@@ -34,7 +34,7 @@ export const StyledButton = styled(Button)`
     height: ${(props) => {
       switch (props.size) {
         case "large":
-          return "36px";
+          return "56px";
         case "small":
           return "32px";
         default:
@@ -45,8 +45,8 @@ export const StyledButton = styled(Button)`
       switch (props.type) {
         case "outlineRed":
           return variableStyles.primaryRed;
-        // case "primaryPink":
-        //   return variableStyles.backgroundWhite;
+        case "primaryRed":
+          return variableStyles.primaryWhite;
         // case "outlinePink":
         //   return variableStyles.primaryPink;
         // case "outlineGray":
@@ -77,8 +77,8 @@ export const StyledButton = styled(Button)`
       switch (props.type) {
         case "outlineRed":
           return `transparent`;
-        // case "primaryPink":
-        //   return variableStyles.primaryPink;
+        case "primaryRed":
+          return variableStyles.primaryRed;
         default:
           return `transparent`;
       }
@@ -89,8 +89,8 @@ export const StyledButton = styled(Button)`
         switch (props.type) {
           case "outlineRed":
             return variableStyles.textWhite;
-          // case "outline":
-          //   return variableStyles.neutral0;
+          case "primaryRed":
+            return variableStyles.primaryWhite;
 
           default:
             return variableStyles.textWhite;
@@ -111,8 +111,8 @@ export const StyledButton = styled(Button)`
         switch (props.type) {
           case "outlineRed":
             return variableStyles.primaryRed;
-          // case "outline":
-          //   return variableStyles.jeans500;
+          case "primaryRed":
+            return variableStyles.primaryRed;
 
           default:
             return "transparent";

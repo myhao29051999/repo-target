@@ -6,8 +6,19 @@ import Slider from "react-slick";
 // constants
 import { images } from "constants/images";
 
+// components
+import { Button } from "components";
+
 // styles
-import { ApplicationContainer, ApplicationContent } from "./style";
+import {
+  ApplicationContainer,
+  ApplicationContent,
+  Title,
+  AppRow,
+  SubTitle,
+  SubTitle2,
+  NameApp,
+} from "./style";
 
 function Application() {
   let settings = {
@@ -32,9 +43,22 @@ function Application() {
   return (
     <ApplicationContainer id="application">
       <ApplicationContent>
-        <Row>
-          <Col span={12}></Col>
-          <Col span={12} className="slide-group">
+        <AppRow>
+          <div className="application-info">
+            <Title>Ứng dụng tiện lợi dành cho người yêu điện ảnh</Title>
+            <SubTitle>
+              Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và
+              đổi quà hấp dẫn.
+            </SubTitle>
+            <Button size="large" type="primaryRed">
+              App miễn phí - Tải về ngay!
+            </Button>
+            <SubTitle2>
+              Tin có 2 phiên bản <NameApp>iOS</NameApp> &{" "}
+              <NameApp>Android</NameApp>
+            </SubTitle2>
+          </div>
+          <div className="slide-group">
             <Image
               src={images.IMG_PHONE}
               alt="img-phone"
@@ -54,8 +78,8 @@ function Application() {
                 </div>
               ))}
             </Slider>
-          </Col>
-        </Row>
+          </div>
+        </AppRow>
       </ApplicationContent>
     </ApplicationContainer>
   );
