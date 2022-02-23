@@ -66,7 +66,9 @@ export default function HeaderDesktop() {
             </Link>
           </li>
           <li>
-            <a>Tin tức</a>
+            <Link to="news" smooth={true} duration={1000}>
+              Tin tức
+            </Link>
           </li>
           <li>
             <a>Ứng dụng</a>

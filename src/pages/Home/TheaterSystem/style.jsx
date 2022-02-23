@@ -11,6 +11,9 @@ export const TheaterContent = styled(Row)`
   .theaterCard-active {
     opacity: 1;
   }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ColImgTheater = styled(Col)`

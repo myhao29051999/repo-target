@@ -46,11 +46,15 @@ export const TabsShowTimeStyle = styled(Tabs)`
   .ant-tabs-nav::before {
     border-bottom: none !important;
   }
-  .ant-tabs-tab:hover {
-    color: ${variableStyles.primaryRed};
+  .ant-tabs-tab:nth-child(2):hover {
+    color: ${variableStyles.textBlack};
+    margin-right: 10px;
+    transform: scale(1.2);
   }
   .ant-tabs-tab {
     font-size: ${variableStyles.fontSize_24};
+    transition: all 0.5s;
+    transform: scale(1);
   }
   .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: ${variableStyles.primaryRed};
