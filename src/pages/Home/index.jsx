@@ -6,6 +6,7 @@ import TixCarousel from "./TixCarousel";
 import MovieList from "./MovieList";
 import TheaterSystem from "./TheaterSystem";
 import News from "./News";
+import Application from "./Application";
 
 // constants
 import { images } from "constants/images";
@@ -29,6 +30,7 @@ export default function Home() {
       <TheaterSystem />
       <Image src={images.IMG_BG_GRAY} height={60} alt="bg-gray" />
       <News />
+      <Application />
       <b>From: a pretty girl My Hao</b>
     </HomeContainer>
   );

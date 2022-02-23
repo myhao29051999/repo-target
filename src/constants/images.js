@@ -11,6 +11,8 @@ import IMG_GALAXY from "assets/images/home/galaxy.jpg";
 import IMG_LOTTE from "assets/images/home/lotte.jpg";
 import IMG_MEGA from "assets/images/home/mega.jpg";
 import IMG_BG_GRAY from "assets/images/home/background-transparent-gray.png";
+
+// news
 import IMG_KM1 from "assets/images/home/km1.jpg";
 import IMG_KM2 from "assets/images/home/km2.jpg";
 import IMG_KM3 from "assets/images/home/km3.jpg";
@@ -23,6 +25,17 @@ import IMG_SK1 from "assets/images/home/sk1.jpg";
 import IMG_SK2 from "assets/images/home/sk2.jpg";
 import IMG_SK3 from "assets/images/home/sk3.jpg";
 import IMG_SK4 from "assets/images/home/sk4.jpg";
+
+// apps
+import BG_APP_SECTION from "assets/images/home/background-app-section.jpg";
+import IMG_PHONE from "assets/images/home/mobile.png";
+import IMG_SLIDE1 from "assets/images/home/slide1.jpg";
+import IMG_SLIDE2 from "assets/images/home/slide2.jpg";
+import IMG_SLIDE3 from "assets/images/home/slide3.jpg";
+import IMG_SLIDE4 from "assets/images/home/slide4.jpg";
+import IMG_SLIDE5 from "assets/images/home/slide5.jpg";
+import IMG_SLIDE6 from "assets/images/home/slide6.jpg";
+import IMG_SLIDE7 from "assets/images/home/slide7.jpg";
 // icons
 import ICON_BACK_TO_TOP from "assets/images/icons/icon-back-to-top.svg";
 import ICON_LOGOUT from "assets/images/icons/icon-logout.svg";
@@ -53,5 +66,14 @@ const images = {
   IMG_SK2,
   IMG_SK3,
   IMG_SK4,
+  BG_APP_SECTION,
+  IMG_PHONE,
+  IMG_SLIDE1,
+  IMG_SLIDE2,
+  IMG_SLIDE3,
+  IMG_SLIDE4,
+  IMG_SLIDE5,
+  IMG_SLIDE6,
+  IMG_SLIDE7,
 };
 export { images };

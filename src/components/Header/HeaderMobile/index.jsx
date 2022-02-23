@@ -96,18 +96,18 @@ function HeaderMobile() {
                 Lịch chiếu
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="theaterSystem" smooth={true} duration={1000}>
                 Cụm rạp
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="showTimes" smooth={true} duration={1000}>
+              <Link to="news" smooth={true} duration={1000}>
                 Tin tức
               </Link>
             </li>
             <li>
-              <Link to="showTimes" smooth={true} duration={1000}>
+              <Link to="application" smooth={true} duration={1000}>
                 Ứng dụng
               </Link>
             </li>

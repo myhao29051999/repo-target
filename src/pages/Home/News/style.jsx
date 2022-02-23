@@ -6,7 +6,6 @@ export const NewsContent = styled.div`
     margin: 0;
   }
   .ant-tabs-card .ant-tabs-content {
-    height: 600px;
     margin-top: -16px;
   }
   .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {

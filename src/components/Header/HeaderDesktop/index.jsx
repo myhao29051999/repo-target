@@ -71,7 +71,9 @@ export default function HeaderDesktop() {
             </Link>
           </li>
           <li>
-            <a>Ứng dụng</a>
+            <Link to="application" smooth={true} duration={1000}>
+              Ứng dụng
+            </Link>
           </li>
         </ul>
       </ListDes>
