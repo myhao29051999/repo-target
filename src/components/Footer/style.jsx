@@ -3,9 +3,12 @@ import variableStyles from "styles/variable-styles";
 import { Row, Col } from "antd";
 
 export const FooterContainer = styled.div`
-  height: 650px;
   background-color: #222;
   position: relative;
+  height: 100vh;
+  @media only screen and (max-width: 992px) {
+    height: 130vh;
+  }
 `;
 
 export const FooterContent = styled(Row)`
@@ -17,7 +20,6 @@ export const FooterContent = styled(Row)`
   transform: translate(-50%, -50%);
   justify-content: center;
   padding: 30px 0;
-  height: 100%;
   .footer-divide {
     border-top: 0.5px solid #4a4a4a;
     margin-bottom: 30px;
@@ -86,9 +88,8 @@ export const FooterInfoGroup = styled.div`
   .img-brand-tix2 {
     display: block;
     margin: 0 auto;
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
   }
-  /* .info-right {
-    position: absolute;
-    right: 0;
-  } */
 `;

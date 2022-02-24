@@ -154,8 +154,8 @@ function Footer() {
           </SocialGroup>
         </FooterItem>
         <hr className="footer-divide" />
-        <Row style={{ width: "100%" }}>
-          <Col span={12}>
+        <Row style={{ width: "100%", display: "flex" }}>
+          <Col span={24}>
             <FooterInfoGroup>
               <Image
                 className="img-brand-tix"
@@ -169,17 +169,17 @@ function Footer() {
                   TIX - SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION
                 </Title>
                 <div className="info">
-                  - Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp.
+                  Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp.
                   Hồ Chí Minh, Việt Nam.
                 </div>
                 <div className="info">
-                  - Giấy chứng nhận đăng ký kinh doanh số: 0101659783, đăng ký
+                  Giấy chứng nhận đăng ký kinh doanh số: 0101659783, đăng ký
                   thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch
                   và đầu tư Thành phố Hồ Chí Minh cấp.
                 </div>
                 <div className="info">Số Điện Thoại (Hotline): 1900545436</div>
                 <div className="info">
-                  - Email:{" "}
+                  Email:{" "}
                   <span className="info-email">
                     truongthimyhao4295@gmail.com
                   </span>
@@ -189,15 +189,6 @@ function Footer() {
                 </div>
               </div>
             </FooterInfoGroup>
-          </Col>
-          <Col span={12} className="info-right">
-            <Image
-              src={images.ICON_BRAND2}
-              alt="img-brand"
-              height={48}
-              width={100}
-              className="img-brand-tix2"
-            />
           </Col>
         </Row>
       </FooterContent>

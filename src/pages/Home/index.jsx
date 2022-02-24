@@ -32,7 +32,6 @@ export default function Home() {
       <News />
       <Application />
       <Footer />
-      <b>From: a pretty girl My Hao</b>
     </HomeContainer>
   );
 }
