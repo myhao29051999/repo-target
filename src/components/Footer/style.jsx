@@ -13,9 +13,16 @@ export const FooterContent = styled(Row)`
   width: 70%;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  justify-content: space-between;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
   padding: 30px 0;
+  height: 100%;
+  .footer-divide {
+    border-top: 0.5px solid #4a4a4a;
+    margin-bottom: 30px;
+    width: 100%;
+  }
 `;
 
 export const FooterItem = styled(Col)``;
@@ -38,6 +45,9 @@ export const SubTitle = styled.div`
 export const SocialGroup = styled.div`
   display: flex;
   justify-content: space-around;
+  .item-content {
+    margin-right: 40px;
+  }
 `;
 
 export const GroupCover = styled.div`
@@ -55,4 +65,30 @@ export const GroupCover = styled.div`
       transform: scale(1.1);
     }
   }
+`;
+
+export const FooterInfoGroup = styled.div`
+  display: flex;
+  width: 100%;
+  .img-brand-tix {
+    border-radius: 6px;
+    margin-right: 16px;
+  }
+  .info {
+    line-height: 1.8;
+    color: ${variableStyles.textGray};
+    font-size: ${variableStyles.fontSize_12};
+    font-weight: ${variableStyles.fwNormal};
+    .info-email {
+      color: ${variableStyles.primaryRed};
+    }
+  }
+  .img-brand-tix2 {
+    display: block;
+    margin: 0 auto;
+  }
+  /* .info-right {
+    position: absolute;
+    right: 0;
+  } */
 `;

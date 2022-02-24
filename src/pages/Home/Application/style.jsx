@@ -21,8 +21,9 @@ export const ApplicationContent = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   color: ${variableStyles.primaryWhite};
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
+
   .application-info {
     margin-top: 24px;
   }
