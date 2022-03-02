@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Image } from "antd-mobile";
 
+import { Header, Footer } from "components";
+
 // HOC
 import Auth from "HOC";
 
@@ -71,6 +73,7 @@ function App() {
           <Auth exact={false} path={paths.ADMINPAGE} Component={AdminPage} />
         </Switch>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

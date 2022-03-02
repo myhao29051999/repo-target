@@ -1,16 +1,24 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import PropTypes from "prop-types";
+
+// components
+import { Button } from "components";
+
 // styles
 import "./style.css";
 function ModalTrailer(props) {
-  const { videoId, ...other } = props;
+  const { videoId, isButton, ...other } = props;
   return (
     <Popup
       trigger={
-        <div className="button-play">
-          <i className="fa fa-play"></i>
-        </div>
+        isButton ? (
+          <Button type="primaryRed">Xem trailer</Button>
+        ) : (
+          <div className="button-play">
+            <i className="fa fa-play"></i>
+          </div>
+        )
       }
       modal
       nested
@@ -37,5 +45,6 @@ function ModalTrailer(props) {
 }
 ModalTrailer.propTypes = {
   videoId: PropTypes.string,
+  isButton: PropTypes.bool,
 };
 export default ModalTrailer;

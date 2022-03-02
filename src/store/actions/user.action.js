@@ -44,7 +44,7 @@ export const postLogin = (taiKhoan, matKhau, history) => {
         history.goBack();
       })
       .catch((err) => {
-        alert("Tên tài khoản hoặc mật khẩu không chính xác");
+        // alert("Tên tài khoản hoặc mật khẩu không chính xác");
         dispatch(stopLoading());
         //gửi lên store
         dispatch(postLoginFailed(err));

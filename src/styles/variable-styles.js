@@ -26,6 +26,7 @@ const variableStyles = {
   textGalaxy: "#F2C23D",
   textCGV: "#F7220A",
   textGray: "#949494",
+  textRed: "#f8090f",
 
   // gradient
   backgroundWhiteGradient: "rgba(255, 255, 255, 0.95)",

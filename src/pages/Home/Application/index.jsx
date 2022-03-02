@@ -50,9 +50,7 @@ function Application() {
               Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và
               đổi quà hấp dẫn.
             </SubTitle>
-            <Button size="large" type="primaryRed">
-              App miễn phí - Tải về ngay!
-            </Button>
+            <Button type="primaryRed">App miễn phí - Tải về ngay!</Button>
             <SubTitle2>
               Tix có 2 phiên bản <NameApp>iOS</NameApp> &{" "}
               <NameApp>Android</NameApp>

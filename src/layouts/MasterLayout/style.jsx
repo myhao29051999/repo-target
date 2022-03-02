@@ -2,7 +2,7 @@ import styled from "styled-components";
 import variableStyles from "styles/variable-styles";
 
 export const MasterLayoutStyle = styled.section`
-  background: ${variableStyles.backgroundWhite};
+  /* background: ${variableStyles.backgroundWhite}; */
   width: 70%;
   margin: 60px auto;
   @media only screen and (max-width: 1400px) {

@@ -14,7 +14,7 @@ import { images } from "constants/images";
 // styles
 import { HomeContainer } from "./style";
 
-import { Header, Footer } from "components";
+import { Header } from "components";
 export default function Home() {
   return (
     <HomeContainer>
@@ -31,7 +31,6 @@ export default function Home() {
       <Image src={images.IMG_BG_GRAY} height={60} alt="bg-gray" />
       <News />
       <Application />
-      <Footer />
     </HomeContainer>
   );
 }
