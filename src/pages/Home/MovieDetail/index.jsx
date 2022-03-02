@@ -63,7 +63,7 @@ function MovieDetail() {
                 <TextBackToHomePage>{tenPhim}</TextBackToHomePage>
               </TitleGroup>
               <Row gutter={[0, 42]}>
-                <Col md={12} xs={24}>
+                <Col md={12} xs={24} className="movie-detail__image">
                   <Image
                     src={hinhAnh}
                     width={360}

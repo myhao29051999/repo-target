@@ -10,8 +10,14 @@ export const MovieDetailContainer = styled.div`
   height: 100vh;
   position: relative;
   font-family: "Roboto", sans-serif;
-  @media only screen and (max-width: 992px) {
-    height: 170vh;
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
+  @media only screen and (max-width: 370px) {
+    height: 150vh;
+    .movie-detail__image {
+      display: none;
+    }
   }
 `;
 
@@ -23,7 +29,7 @@ export const MovieDetailContent = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   @media only screen and (max-width: 992px) {
-    width: 98%;
+    width: 90%;
   }
 `;
 
@@ -41,6 +47,9 @@ export const TitleGroup = styled.div`
     &:hover {
       color: ${variableStyles.textRed};
     }
+  }
+  @media only screen and (max-width: 768px) {
+    text-align: center;
   }
 `;
 

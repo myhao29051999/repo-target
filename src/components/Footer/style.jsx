@@ -9,6 +9,9 @@ export const FooterContainer = styled.div`
   @media only screen and (max-width: 992px) {
     height: 130vh;
   }
+  @media only screen and (max-width: 370px) {
+    height: 150vh;
+  }
 `;
 
 export const FooterContent = styled(Row)`
