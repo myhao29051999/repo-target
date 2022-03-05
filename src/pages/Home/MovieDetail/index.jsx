@@ -37,34 +37,40 @@ function MovieDetail() {
   const columns = [
     {
       title: "Số thứ tự",
+      width: 60,
       dataIndex: "index",
       key: "index",
       render: (text, record, index) => <Space>{index + 1}</Space>,
     },
     {
       title: "Tên cụp rạp",
+      width: 250,
       dataIndex: "thongTinRap",
       key: "thongTinRap",
       render: (record) => <Space>{record?.tenCumRap}</Space>,
     },
     {
       title: "Tên rạp",
+      width: 250,
       dataIndex: "thongTinRap",
       key: "thongTinRap",
       render: (record) => <Space>{record?.tenRap}</Space>,
     },
     {
       title: "Giá vé",
+      width: 150,
       key: "giaVe",
       dataIndex: "giaVe",
     },
     {
       title: "Thời lượng",
+      width: 100,
       key: "thoiLuong",
       dataIndex: "thoiLuong",
     },
     {
       title: "Ngày chiếu",
+      width: 150,
       key: "ngayChieuGioChieu",
       dataIndex: "ngayChieuGioChieu",
       render: (record) => formatDate(record, "DD/MM/YYYY -- hh:mm"),
@@ -157,6 +163,7 @@ function MovieDetail() {
                   style={{ marginTop: "32px" }}
                   columns={columns}
                   dataSource={data}
+                  scroll={{ x: 1300 }}
                 />
               )}
             </>
