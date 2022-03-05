@@ -1,35 +1,23 @@
 import styled from "styled-components";
 import { images } from "constants/images";
 import variableStyles from "styles/variable-styles";
+import { Image } from "antd-mobile";
+
 export const MovieDetailContainer = styled.div`
   background-image: url(${images.MOVIE_DETAIL_BG});
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  vertical-align: baseline;
   position: relative;
   font-family: "Roboto", sans-serif;
-  @media only screen and (max-width: 768px) {
-    height: 200vh;
-  }
-  @media only screen and (max-width: 370px) {
-    height: 150vh;
-    .movie-detail__image {
-      display: none;
-    }
-  }
 `;
 
 export const MovieDetailContent = styled.div`
-  position: absolute;
-  width: 80%;
-  /* height: 100%; */
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  @media only screen and (max-width: 992px) {
-    width: 90%;
+  padding: 120px 60px;
+  @media only screen and (max-width: 1090px) {
+    padding: 120px 16px;
   }
 `;
 
@@ -90,4 +78,13 @@ export const MovieTextTypeFilm = styled.div`
   font-weight: ${variableStyles.fwStrongBold};
   color: ${variableStyles.textRed};
   text-transform: uppercase;
+`;
+
+export const MovieDetailImg = styled(Image)`
+  width: 360px;
+  height: 533px;
+  @media only screen and (max-width: 460px) {
+    width: 200px;
+    height: 300px;
+  }
 `;

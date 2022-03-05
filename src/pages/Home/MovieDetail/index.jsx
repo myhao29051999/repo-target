@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Spin, Row, Col } from "antd";
-import { Image } from "antd-mobile";
 
 // actions
 import { getMovieDetail } from "store/actions/movie.action";
@@ -24,6 +23,7 @@ import {
   MovieTextDetail,
   MovieDetailGroup,
   MovieTextTypeFilm,
+  MovieDetailImg,
 } from "./style";
 function MovieDetail() {
   const { tenPhim, hinhAnh, moTa, ngayKhoiChieu, trailer } = useSelector(
@@ -64,12 +64,7 @@ function MovieDetail() {
               </TitleGroup>
               <Row gutter={[0, 42]}>
                 <Col md={12} xs={24} className="movie-detail__image">
-                  <Image
-                    src={hinhAnh}
-                    width={360}
-                    height={533}
-                    alt="img-detail-movie"
-                  />
+                  <MovieDetailImg src={hinhAnh} alt="img-detail-movie" />
                 </Col>
                 <Col md={12} xs={24}>
                   <TextBackToHomePage>{tenPhim}</TextBackToHomePage>
