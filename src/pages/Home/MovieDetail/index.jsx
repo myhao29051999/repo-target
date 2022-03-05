@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { Spin, Row, Col } from "antd";
+import { Spin, Row, Col, Table, Tag, Space } from "antd";
 
 // actions
 import { getMovieDetail } from "store/actions/movie.action";
@@ -26,13 +26,52 @@ import {
   MovieDetailImg,
 } from "./style";
 function MovieDetail() {
-  const { tenPhim, hinhAnh, moTa, ngayKhoiChieu, trailer } = useSelector(
-    (state) => state.movie.movieDetail
-  );
+  const { tenPhim, hinhAnh, moTa, ngayKhoiChieu, trailer, lichChieu } =
+    useSelector((state) => state.movie.movieDetail);
   const loading = useSelector((state) => state.common.loading);
   const dispatch = useDispatch();
   const params = useParams();
   const history = useHistory();
+  const [isShowListSchedules, setIsShowListSchedules] = useState(false);
+
+  const columns = [
+    {
+      title: "Số thứ tự",
+      dataIndex: "index",
+      key: "index",
+      render: (text, record, index) => <Space>{index + 1}</Space>,
+    },
+    {
+      title: "Tên cụp rạp",
+      dataIndex: "thongTinRap",
+      key: "thongTinRap",
+      render: (record) => <Space>{record?.tenCumRap}</Space>,
+    },
+    {
+      title: "Tên rạp",
+      dataIndex: "thongTinRap",
+      key: "thongTinRap",
+      render: (record) => <Space>{record?.tenRap}</Space>,
+    },
+    {
+      title: "Giá vé",
+      key: "giaVe",
+      dataIndex: "giaVe",
+    },
+    {
+      title: "Thời lượng",
+      key: "thoiLuong",
+      dataIndex: "thoiLuong",
+    },
+    {
+      title: "Ngày chiếu",
+      key: "ngayChieuGioChieu",
+      dataIndex: "ngayChieuGioChieu",
+      render: (record) => formatDate(record, "DD/MM/YYYY -- hh:mm"),
+    },
+  ];
+
+  const data = lichChieu;
 
   const handleBackToHomePage = () => {
     history.push("/");
@@ -103,12 +142,23 @@ function MovieDetail() {
                   </MovieDetailGroup>
                   <MovieDetailGroup style={{ marginTop: "32px" }}>
                     <ModalTrailer isButton videoId={trailer} />
-                    <Button style={{ marginLeft: "16px" }} type="primaryRed">
+                    <Button
+                      onClick={() => setIsShowListSchedules(true)}
+                      style={{ marginLeft: "16px" }}
+                      type="primaryRed"
+                    >
                       Mua vé ngay
                     </Button>
                   </MovieDetailGroup>
                 </Col>
               </Row>
+              {isShowListSchedules && (
+                <Table
+                  style={{ marginTop: "32px" }}
+                  columns={columns}
+                  dataSource={data}
+                />
+              )}
             </>
           )}
         </MovieDetailContent>

@@ -12,6 +12,18 @@ export const MovieDetailContainer = styled.div`
   vertical-align: baseline;
   position: relative;
   font-family: "Roboto", sans-serif;
+  .ant-table {
+    background: none !important;
+    color: ${variableStyles.primaryWhite};
+  }
+  .ant-table-thead > tr > th {
+    background: none !important;
+    color: ${variableStyles.primaryWhite};
+  }
+  .ant-table-tbody > tr.ant-table-row:hover > td {
+    background: none !important;
+    color: ${variableStyles.primaryRed};
+  }
 `;
 
 export const MovieDetailContent = styled.div`
