@@ -85,8 +85,8 @@ export default function HeaderDesktop() {
               src={images.ICON_LOGOUT}
               alt="icon-logout"
               aria-hidden="true"
-              height={30}
-              width={30}
+              height={20}
+              width={20}
               style={{ cursor: "pointer", display: "block" }}
               onClick={onLogout}
             />

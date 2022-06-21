@@ -27,7 +27,6 @@ function ModalLogin(props) {
   // states
   const [isOpenRegister, setIsOpenRegister] = useState(false);
   const [isShowSuggest, setIsShowSuggest] = useState(true);
-  const [user, setUser] = useState({});
 
   // constants
   const [form] = Form.useForm();
