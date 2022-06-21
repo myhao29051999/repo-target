@@ -28,6 +28,7 @@ export const MovieDetailContainer = styled.div`
 
 export const MovieDetailContent = styled.div`
   padding: 120px 60px;
+  min-height: 650px;
   @media only screen and (max-width: 1090px) {
     padding: 120px 16px;
   }
@@ -99,4 +100,10 @@ export const MovieDetailImg = styled(Image)`
     width: 200px;
     height: 300px;
   }
+`;
+
+export const SpinCustom = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
 `;

@@ -134,9 +134,9 @@ function MovieList() {
           </SliderStyle>
         </TabPaneShowTimeStyle>
         <TabPaneShowTimeStyle tab="Sắp chiếu" key="2">
-          {/* <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>
-            {renderUpcomingMovie()}
-          </SliderStyle> */}
+        <SliderStyle nextArrow={<SampleNextArrow />} {...settings}>
+            {renderListMovie()}
+          </SliderStyle>
         </TabPaneShowTimeStyle>
       </TabsShowTimeStyle>
     </MasterLayout>

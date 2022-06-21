@@ -9,7 +9,7 @@ export const NewsContent = styled.div`
     margin-top: -16px;
   }
   .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
-    padding: 16px;
+    padding: 18px;
     background: #fff;
   }
   .ant-tabs-card > .ant-tabs-nav::before {

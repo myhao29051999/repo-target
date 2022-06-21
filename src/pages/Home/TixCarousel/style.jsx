@@ -14,7 +14,7 @@ export const TixCarouselStyle = styled(Slider)`
   }
 
   .ant-image {
-    max-height: 620px;
+    max-height: 100%;
   }
   .tix-carousel__item {
     position: relative;

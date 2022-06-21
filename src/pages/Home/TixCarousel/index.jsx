@@ -26,39 +26,20 @@ export default function TixCarousel() {
         <Image
           preview={false}
           width="100%"
-          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Teaser-TroChoi-DayBinh.png"
+          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Package-U22.png"
           alt="img-carousel"
         />
-        <ModalTrailer videoId={"oqxAJKy0ii4"} />
-      </div>
-
-      <div className="tix-carousel__item">
-        <Image
-          preview={false}
-          width="100%"
-          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Black-Widow.png"
-          alt="img-carousel"
-        />
-        <ModalTrailer videoId={"fByNc-ZHAP8"} />
       </div>
       <div className="tix-carousel__item">
         <Image
           preview={false}
           width="100%"
-          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Shangchi.png"
+          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/App.jpg"
           alt="img-carousel"
         />
-        <ModalTrailer videoId={"8YjFbMbfXaQ"} />
+        {/* <ModalTrailer videoId={"8YjFbMbfXaQ"} /> */}
       </div>
-      <div className="tix-carousel__item">
-        <Image
-          preview={false}
-          width="100%"
-          src="https://www.bhdstar.vn/wp-content/uploads/2018/03/Suicide-Squad-1920-x-1080.jpg"
-          alt="img-carousel"
-        />
-        <ModalTrailer videoId={"QTg5K0XDiaE"} />
-      </div>
+     
     </TixCarouselStyle>
   );
 }

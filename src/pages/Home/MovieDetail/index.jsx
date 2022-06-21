@@ -24,6 +24,7 @@ import {
   MovieDetailGroup,
   MovieTextTypeFilm,
   MovieDetailImg,
+  SpinCustom,
 } from "./style";
 function MovieDetail() {
   const { tenPhim, hinhAnh, moTa, ngayKhoiChieu, trailer, lichChieu } =
@@ -93,7 +94,9 @@ function MovieDetail() {
       <MovieDetailContainer>
         <MovieDetailContent>
           {loading ? (
-            <Spin />
+           <SpinCustom>
+              <Spin />
+           </SpinCustom>
           ) : (
             <>
               <TitleGroup>
