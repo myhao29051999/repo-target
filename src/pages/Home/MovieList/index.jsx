@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // liblaries
 import { useSelector, useDispatch } from "react-redux";
 // utils
-import { formatDate } from "utils";
+// import { formatDate } from "utils";
 
 // layouts
 import MasterLayout from "layouts/MasterLayout";
@@ -23,18 +23,18 @@ function MovieList() {
   const movieList = useSelector((state) => state.movie.movieList);
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
 
-  function checkDateToShowUpcomingMovies(currentDate, someDate) {
-    if (someDate > currentDate) {
-      return true; // sắp chiếu
-    } else {
-      return false; // đang chiếu
-    }
-  }
+  // function checkDateToShowUpcomingMovies(currentDate, someDate) {
+  //   if (someDate > currentDate) {
+  //     return true; // sắp chiếu
+  //   } else {
+  //     return false; // đang chiếu
+  //   }
+  // }
 
   const renderListMovie = () => {
     return movieList.map((movie, index) => {
       return (
-        <div>
+        <div key={index}>
           <MovieCard
             key={index}
             urlImage={movie?.hinhAnh}

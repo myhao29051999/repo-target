@@ -35,17 +35,18 @@ function TheaterSystem() {
     (state) => state.system.thongTinLichChieuHeThongRap
   );
   const dispatch = useDispatch(); //giup dispatch 1 cai action trong redux, vd bam nut add...
-
   // state
   const [maHeThongRap, setMaHeThongRap] = useState("BHDStar");
-  const [active, setActive] = useState();
+  const [active, setActive] = useState("BHDStar");
   const [listFilm, setListFilms] = useState([]);
-  const [activeTheaterCard, setActiveTheaterCard] = useState();
+  const [activeTheaterCard, setActiveTheaterCard] = useState("");
 
   const onGetMaHeThongRap = (item) => {
     setMaHeThongRap(item?.maHeThongRap);
     setActive(item?.maHeThongRap);
   };
+
+  // const firstMaCumRap = lichChieuHeThongRap[0].lstCumRap[0].maCumRap;
 
   const onGetTypeTheater = () => {
     if (maHeThongRap === "BHDStar") {
@@ -84,15 +85,15 @@ function TheaterSystem() {
     });
     let lstFilter = [];
     lstCumRap.map((i) => {
-      lstFilter = i.filter((file) => {
-        return file.maCumRap === item.maCumRap;
+      lstFilter = i.filter((film) => {
+        return film.maCumRap === item.maCumRap;
       });
     });
     lstFilter.map((i) => {
-      console.log("ds film", i?.danhSachPhim);
       setListFilms(i?.danhSachPhim);
     });
   };
+
 
   useEffect(() => {
     dispatch(getListTheaterSystem());
@@ -110,7 +111,7 @@ function TheaterSystem() {
       <TheaterContent>
         <ColImgTheater span={4}>
           {theaterList.map((item, index) => (
-            <DivCover key={index}>
+            <DivCover key={index} className="theater-cover">
               <ImgTheater
                 key={index}
                 className={
@@ -125,14 +126,13 @@ function TheaterSystem() {
         </ColImgTheater>
         <ColInfoTheater span={8}>
           {cumRap.map((item, index) => (
-            <DivCover>
+            <DivCover key={index}>
               <TheaterCard
                 className={
                   item.maCumRap === activeTheaterCard
                     ? "theaterCard-active"
                     : ""
                 }
-                // className="aaaaahh"
                 key={index}
                 image={onRenderImageTheater()}
                 type={onGetTypeTheater()}
@@ -146,7 +146,7 @@ function TheaterSystem() {
         </ColInfoTheater>
         <ColInfoTheater span={12}>
           {listFilm.map((item, index) => (
-            <DivCover>
+            <DivCover key={index}>
               <FilmCard
                 key={index}
                 image={item?.hinhAnh}

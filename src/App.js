@@ -65,10 +65,10 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact={true} path={paths.HOMEPAGE} component={HomePage} />
-          <Auth
+          <Route
             exact={false}
             path={paths.MOVIE_DETAIL + ":maPhim"}
-            Component={MovieDetail}
+            component={MovieDetail}
           />
           <Auth exact={false} path={paths.ADMINPAGE} Component={AdminPage} />
         </Switch>

@@ -14,7 +14,7 @@ const propTypes = {
   urlImage: PropTypes.string,
   movieName: PropTypes.string,
   trailer: PropTypes.string,
-  maPhim: PropTypes.string,
+  maPhim: PropTypes.any,
 };
 function MovieCard(props) {
   const { urlImage, movieName, trailer, maPhim, ...other } = props;

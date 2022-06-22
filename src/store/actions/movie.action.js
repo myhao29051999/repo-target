@@ -19,7 +19,6 @@ export const getMovieList = () => {
     })
       .then((res) => {
         dispatch(stopLoading());
-        // console.log(res.data);
         //gửi lên store
         dispatch(getMovieListSuccess(res.data));
         // console.log("data" + res.data);

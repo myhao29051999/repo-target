@@ -9,7 +9,7 @@ import MasterLayout from "layouts/MasterLayout";
 import { images } from "constants/images";
 
 // styles
-import { NewsContent, NewsItem } from "./style";
+import { NewsContent } from "./style";
 const { TabPane } = Tabs;
 function News() {
   let settings = {
@@ -56,8 +56,8 @@ function News() {
         <Tabs type="card">
           <TabPane tab="Khuyến mãi" key="1">
             <Slider {...settings}>
-              {listPromotions.map((item) => (
-                <div>
+              {listPromotions.map((item, index) => (
+                <div key={index}>
                   <Image
                     height={242}
                     width="97%"
@@ -71,8 +71,8 @@ function News() {
           </TabPane>
           <TabPane tab="Sự kiện" key="2">
             <Slider {...settings}>
-              {listEvents.map((item) => (
-                <div>
+              {listEvents.map((item, index) => (
+                <div key={index}>
                   <Image
                     height={242}
                     width="97%"
