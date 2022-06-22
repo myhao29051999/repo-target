@@ -110,7 +110,7 @@ function MovieDetail() {
                 <TitleDivide />
                 <TextBackToHomePage>{tenPhim}</TextBackToHomePage>
               </TitleGroup>
-              <Row gutter={[0, 42]}>
+              <Row gutter={[0, 0]}>
                 <Col md={12} xs={24} className="movie-detail__image">
                   <MovieDetailImg src={hinhAnh} alt="img-detail-movie" />
                 </Col>

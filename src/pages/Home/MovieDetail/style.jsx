@@ -27,10 +27,18 @@ export const MovieDetailContainer = styled.div`
 `;
 
 export const MovieDetailContent = styled.div`
-  padding: 120px 60px;
+  padding: 120px 0px;
   min-height: 650px;
-  @media only screen and (max-width: 1090px) {
-    padding: 120px 16px;
+  width: 60%;
+  margin: 0 auto;
+  @media only screen and (max-width: 1290px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 870px) {
+    width: 96%;
+  }
+  @media only screen and (max-width: 767px) {
+    width: 80%;
   }
 `;
 
@@ -84,6 +92,7 @@ export const MovieTextDetail = styled.div`
 export const MovieDetailGroup = styled.div`
   display: flex;
   margin-bottom: 16px;
+
 `;
 
 export const MovieTextTypeFilm = styled.div`
@@ -96,6 +105,9 @@ export const MovieTextTypeFilm = styled.div`
 export const MovieDetailImg = styled(Image)`
   width: 360px;
   height: 533px;
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
   @media only screen and (max-width: 460px) {
     width: 200px;
     height: 300px;
