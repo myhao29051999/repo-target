@@ -45,8 +45,9 @@ function TheaterSystem() {
     setMaHeThongRap(item?.maHeThongRap);
     setActive(item?.maHeThongRap);
   };
-
-  // const firstMaCumRap = lichChieuHeThongRap[0].lstCumRap[0].maCumRap;
+  
+  // lấy ra thông tin maCumRap dau tien khi chưa click vào theaterCard vẫn có maCumRap để render ra ds phim theo cụm rạp
+  const firstMaCumRap = lichChieuHeThongRap ? lichChieuHeThongRap[0]?.lstCumRap[0]?.maCumRap : "";
 
   const onGetTypeTheater = () => {
     if (maHeThongRap === "BHDStar") {
@@ -77,23 +78,21 @@ function TheaterSystem() {
     }
     return images.IMG_MEGA;
   };
-
-  const onRenderListFilmsWithMaCumRap = (item) => {
-    setActiveTheaterCard(item.maCumRap);
+  const onRenderListFilmsWithMaCumRap = (mcr) => {
+    setActiveTheaterCard(mcr);
     let lstCumRap = lichChieuHeThongRap.map((item) => {
       return item?.lstCumRap;
     });
     let lstFilter = [];
     lstCumRap.map((i) => {
       lstFilter = i.filter((film) => {
-        return film.maCumRap === item.maCumRap;
+        return film.maCumRap === mcr;
       });
     });
     lstFilter.map((i) => {
       setListFilms(i?.danhSachPhim);
     });
   };
-
 
   useEffect(() => {
     dispatch(getListTheaterSystem());
@@ -105,6 +104,12 @@ function TheaterSystem() {
       dispatch(getThongTinLichChieuHeThongRap(maHeThongRap));
     }
   }, [maHeThongRap]);
+
+  useEffect(() => {
+    if(firstMaCumRap !== "") {
+      onRenderListFilmsWithMaCumRap(firstMaCumRap);
+    }
+  }, [firstMaCumRap]);
 
   return (
     <MasterLayout id="theaterSystem">
@@ -139,7 +144,7 @@ function TheaterSystem() {
                 name={item?.tenCumRap}
                 address={item?.diaChi}
                 listTheaters={item?.danhSachRap}
-                onClick={() => onRenderListFilmsWithMaCumRap(item)}
+                onClick={() => onRenderListFilmsWithMaCumRap(item?.maCumRap)}
               />
             </DivCover>
           ))}
