@@ -11,6 +11,7 @@ import { formatDate } from "utils";
 
 // components
 import { Header, ModalTrailer, Button } from "components";
+import TheaterCard from './TheaterCard';
 
 // styles
 import {
@@ -79,6 +80,15 @@ function MovieDetail() {
   ];
 
   const data = lichChieu;
+
+  // const filterData = data.filter(item => item.thongTinRap.maCumRap === "cgv-crescent-mall");
+  let newData = [];
+  let theaterItem = {};
+  const listTheaters = data?.map(item => theaterItem = {maCumRap: item?.thongTinRap?.maCumRap, tenCumRap: item?.thongTinRap?.tenCumRap});
+ 
+  newData = listTheaters?.filter(item => newData?.includes(item?.maCumRap) ? '' : newData.push(item?.maCumRap))
+  console.log("newData", newData);
+  console.log("newData 1", newData ? newData[0] : "");
 
   const handleBackToHomePage = () => {
     history.push("/");
@@ -162,12 +172,11 @@ function MovieDetail() {
                 </Col>
               </Row>
               {isShowListSchedules && (
-                <Table
-                  style={{ marginTop: "32px" }}
-                  columns={columns}
-                  dataSource={data}
-                  scroll={{ x: 1300 }}
-                />
+              //  <TheaterCard />
+             newData.map((item, index) => {
+              return  <TheaterCard key={index} theaterName={item.tenCumRap} />
+               })
+              
               )}
             </>
           )}

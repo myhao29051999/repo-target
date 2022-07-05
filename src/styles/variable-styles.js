@@ -35,6 +35,7 @@ const variableStyles = {
   backgroundWhite: "#ffffff",
   backgroundBlack: "#000000",
   backgroundDark: "#111111",
+  backgroundGray: "#1c2936",
 
   // + Icon color:
   iconDefault: "#9A9DB2",

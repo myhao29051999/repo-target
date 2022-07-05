@@ -29,10 +29,10 @@ import IMG_SK4 from "assets/images/home/sk4.jpg";
 // apps
 import BG_APP_SECTION from "assets/images/home/background-app-section.jpg";
 import IMG_PHONE from "assets/images/home/mobile.png";
-import IMG_SLIDE1 from "assets/images/home/slide1.jpg";
-import IMG_SLIDE2 from "assets/images/home/slide2.jpg";
-import IMG_SLIDE3 from "assets/images/home/slide3.jpg";
-import IMG_SLIDE4 from "assets/images/home/slide4.jpg";
+import IMG_SLIDE1 from "assets/images/home/slide1.png";
+import IMG_SLIDE2 from "assets/images/home/slide2.png";
+import IMG_SLIDE3 from "assets/images/home/slide3.png";
+import IMG_SLIDE4 from "assets/images/home/slide4.png";
 import IMG_SLIDE5 from "assets/images/home/slide5.jpg";
 import IMG_SLIDE6 from "assets/images/home/slide6.jpg";
 import IMG_SLIDE7 from "assets/images/home/slide7.jpg";
@@ -43,6 +43,8 @@ import MOVIE_DETAIL_BG from "assets/images/detail/detail-bg.jpg";
 // icons
 import ICON_BACK_TO_TOP from "assets/images/icons/icon-back-to-top.svg";
 import ICON_LOGOUT from "assets/images/icons/icon-logout.svg";
+import ICON_ARROW_DOWN from 'assets/images/icons/icon-arrow-down.png';
+import ICON_ARROW_UP from 'assets/images/icons/icon-arrow-up.png';
 
 // icons in footer
 import ICON_PARTNER1 from "assets/images/icons/dt1.png";
@@ -135,6 +137,9 @@ const images = {
   ICON_SOCIAL4,
   ICON_BRAND1,
   ICON_BRAND2,
+
+  ICON_ARROW_DOWN,
+  ICON_ARROW_UP,
 
   MOVIE_DETAIL_BG,
 };
