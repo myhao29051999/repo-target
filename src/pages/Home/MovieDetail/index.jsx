@@ -86,11 +86,15 @@ function MovieDetail() {
   let theaterItem = {};
   const listTheaters = data?.map(item => theaterItem = {maCumRap: item?.thongTinRap?.maCumRap, tenCumRap: item?.thongTinRap?.tenCumRap});
  
-  newData = listTheaters?.filter(item => newData?.includes(item?.maCumRap) ? '' : newData.push(item?.maCumRap))
-  console.log("newData", newData);
-  console.log("newData 1", newData ? newData[0] : "");
+  newData = listTheaters?.filter(item => newData?.includes(item?.maCumRap) ? '' : newData.push(item?.maCumRap));
+
+  // const listMoviesFilterByTheaterId = data?.filter(item => item?.ngayChieuGioChieu.includes("2019-01-01"));
+  // console.log("listMoviesFilterByDay", listMoviesFilterByDay);
+
 
   const handleBackToHomePage = () => {
+
+    
     history.push("/");
   };
 
@@ -174,7 +178,7 @@ function MovieDetail() {
               {isShowListSchedules && (
               //  <TheaterCard />
              newData.map((item, index) => {
-              return  <TheaterCard key={index} theaterName={item.tenCumRap} />
+              return  <TheaterCard key={index} theaterName={item.tenCumRap} theaterId={item.maCumRap} listMovies={data} />
                })
               
               )}
