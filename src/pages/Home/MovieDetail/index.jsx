@@ -7,7 +7,7 @@ import { Spin, Row, Col, Table, Tag, Space } from "antd";
 import { getMovieDetail } from "store/actions/movie.action";
 
 // utils
-import { formatDate } from "utils";
+import { formatDate, getTrailerId } from "utils";
 
 // components
 import { Header, ModalTrailer, Button } from "components";
@@ -27,6 +27,7 @@ import {
   MovieDetailImg,
   SpinCustom,
 } from "./style";
+
 function MovieDetail() {
   const { tenPhim, hinhAnh, moTa, ngayKhoiChieu, trailer, lichChieu } =
     useSelector((state) => state.movie.movieDetail);
@@ -164,7 +165,7 @@ function MovieDetail() {
                     <MovieTextDetail>Phụ đề tiếng Việt</MovieTextDetail>
                   </MovieDetailGroup>
                   <MovieDetailGroup style={{ marginTop: "32px" }}>
-                    <ModalTrailer isButton videoId={trailer} />
+                    <ModalTrailer isButton videoId={getTrailerId(trailer)} />
                     <Button
                       onClick={() => setIsShowListSchedules(true)}
                       style={{ marginLeft: "16px" }}

@@ -31,3 +31,8 @@ export function getUserFromLocalStorage() {
   }
   return null;
 }
+
+export function getTrailerId(trailer){
+  const trailerId = trailer?.includes("https://www.youtube.com/embed/") ? trailer?.slice(trailer.lastIndexOf("/")+1, trailer.length) : trailer?.slice(trailer.lastIndexOf("=")+1,  trailer.length);
+  return trailerId;
+}

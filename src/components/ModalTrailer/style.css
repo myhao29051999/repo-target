@@ -3,7 +3,8 @@
     background-color: black !important;
     width: max-content;
     padding: 0 !important;
-    width: 51% !important;
+    /* width: 51% !important; */
+    border: none !important;
     height: 452px;
     
 }
